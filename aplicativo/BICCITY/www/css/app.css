@@ -1,0 +1,191 @@
+/*
+ * Please see the included README.md file for license terms and conditions.
+ */
+
+
+/* This file is completely optional and not required. */
+/* Note the reference that includes it in the index.html file. */
+
+
+/* Disable certain interactions on touch devices */
+/* SOURCE: https://github.com/ftlabs/fastclick/blob/master/examples/input.html */
+/* LICENSE: https://github.com/ftlabs/fastclick/blob/master/LICENSE */
+body {
+    -webkit-touch-callout: none ;
+    -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
+    -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
+    -webkit-highlight: none ;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) ;
+    -webkit-tap-highlight-color: transparent ;      /* For some Androids */
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+html {
+    -ms-touch-action: pan-x ;
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+body {
+    -ms-touch-action: pan-y ;
+    -ms-content-zooming: none ;
+}
+
+/* allow copy-paste */
+input, textarea  {
+    -webkit-user-select: text ; -moz-user-select: text ; -ms-user-select: text ; user-select: text ;
+}
+
+body {
+    /* margin: 0.5rem ; */
+    background: white ;
+    color: black ;
+}
+
+.textcolor{
+    color: white;
+}
+
+.demo-layout-transparent {
+  background: url('../images/1969625.jpg'); 
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white; 
+}
+
+.mage{
+    width: 40%;
+    height:15%;
+    margin-top: 5%; 
+    margin-left: 33%;
+}
+
+.top{
+    margin-top:70%;
+    margin-left:40%;
+    width:20%;
+    height:20%;
+}
+
+.tp1{
+    color:white;
+    margin-left:27%;
+    margin-top:5%;
+}
+
+.headercolor,.tabcolor{
+    background-color:#1665c0;
+    color: white;
+}
+
+.card{
+    margin-top:30%;
+    margin-left:5%;
+    width:50%;
+}
+
+.card1{
+    margin-top:35%;
+    margin-left:5%;
+    width:50%;
+}
+
+.demo-card-wide.card2{
+    margin-top:0%;
+    margin-left:0%;
+    width:100%;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height:150px;
+  background:url('../images/space.png');
+}
+
+
+.demo-list-item{
+    width:100%;
+}
+
+.moeda1{
+    height:20px;
+    width:20px;
+    margin-left:2%;
+}
+
+.moeda2{
+    height:80px;
+    width:80px;
+    margin-top:2%;
+    margin-left:35%;
+}
+
+.divmoeda{
+    background-color:#1665c0;
+    width:100%;
+}
+
+.divmoeda1{
+    margin-top:10%;
+    margin-left:5%;
+}
+
+.card3{
+    margin-top:10%;
+    margin-left:5%;
+    width:90%;
+}
+
+.imgmoeda{
+    height:40%;
+    width:40%;
+    margin-top:2%;
+    margin-left:1%;
+    float:left;
+}
+
+.imgcupon{
+    height:50%;
+    width:50%;
+    margin-top:5%;
+    margin-left:5%;
+    float:left;
+}
+
+
+.divcupon{
+   margin-top:5%;
+   margin-left:5%;
+   width:90%;
+   height:50px;
+}
+
+.div1{
+   margin-top:5%;
+   margin-left:5%;
+   width:90%;
+   height:50px;
+}
+
+
+.demo-list-two {
+  width: 100%;
+  margin-top:5%;
+}
+
+.li_listen{
+    width:90%;
+    margin-left:5%;
+    margin-top:5%;
+    
+}
+
+.demo-list-radio {
+  display: inline;
+}

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+
+         <link rel="stylesheet" href="css/material.min.css">
+        <script type="application/javascript" src="js/material.min.js"></script>
+        <link rel="stylesheet" href="css/mdl-selectfield.min.css">
+        <script type="application/javascript" src="js/mdl-selectfield.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <link href="css/jquery-ui.min.css">
+        <link href="css/jquery-ui.structure.min.css">
+        <link href="css/jquery-ui.theme.min.css">
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.slim.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        
+      <!--     
+        <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+        
+        <link href="css/materialize.min.css">
+        <script src="js/materialize.min.js"></script>
+        
+        <link href="css/getmdl-select.min.css">
+        <script src="js/getmdl-select.min.js"></script>  -->
+
+        <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script type="application/javascript" src="js/inicio.js"></script>
+
+        <script>
+            $( function() {
+                    $( "#datepicker" ).datepicker({format: 'dd/mm/yyyy',language: 'pt-BR',autoclose: true});
+                } );
+        </script>
+
+    </head> 
+
+    <body onload="initial()">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        
+        
+        
+        <!------------ Pagina mainpage ---------------->
+        <div class="upage demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header" id="mainpage">
+
+                <img class="mage" src="images/logo2.png">
+
+                <div class="mdl-progress mdl-js-progress mdl-spinner--single-color mdl-progress__indeterminate" style="width:60%;margin-left:20%;margin-top:80%"></div>
+
+                <div class="tp1">
+                    <span id="msg">  Carregando informações!!</span>
+                </div>   
+            
+               
+
+        </div>
+         
+        
+        <!------------ Pagina de cadastro e login ---------------->
+
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="cadlog">
+                
+             <header class="mdl-layout__header">
+
+                    <div class="mdl-layout__header-row headercolor">
+
+                        <span class="mdl-layout-title">BICCITY</span>
+                    </div>
+
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#cadastro" class="mdl-layout__tab is-active tabcolor">Cadastro</a>
+                        <a href="#login" class="mdl-layout__tab tabcolor">Login</a>
+
+                    </div>
+
+             </header>
+            
+            <div class="mdl-layout__content">
+            
+                <section class="mdl-layout__tab-panel is-active" id="cadastro">
+
+                        <div class="page-content">
+
+                            <div class="mdl-card mdl-shadow--4dp card">
+
+                                <div class="mdl-card__supporting-text">
+
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample1">
+                                        <label class="mdl-textfield__label" for="sample1">E-mail</label>
+                                    </div>
+
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample2">
+                                        <label class="mdl-textfield__label" for="sample2">Nome de usuario</label>
+                                    </div>
+
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample3">
+                                        <label class="mdl-textfield__label" for="sample3">Senha</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="mdl-card__actions mdl-card--border">
+
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:5%;color:#1665c0;">
+                                Cadastrar
+                            </a>
+
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:10%;color:#1665c0;">
+                                Limpar
+                            </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+                
+                    <section class="mdl-layout__tab-panel" id="login">
+
+                        <div class="page-content">
+
+                            <div class="mdl-card mdl-shadow--4dp card1">
+
+                                <div class="mdl-card__supporting-text">
+
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample4">
+                                        <label class="mdl-textfield__label" for="sample4">Nome de usuario</label>
+                                    </div>
+
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="sample5">
+                                        <label class="mdl-textfield__label" for="sample5">Senha</label>
+                                    </div>
+                                        
+                                    <label style="color:#1665c0;">Esqueceu o login/senha?</label>
+                                    
+                                </div>
+
+                                <div class="mdl-card__actions mdl-card--border">
+
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:5%;color:#1665c0;">
+                                Entrar
+                            </a>
+
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:10%;color:#1665c0;">
+                                Limpar
+                            </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+            
+            </div>
+            
+        </div>
+        
+        
+        <!------------ Pagina de usuario ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="user">
+        
+            <header class="mdl-layout__header">
+
+                    <div class="mdl-layout__header-row headercolor">
+
+                        <span class="mdl-layout-title">BICCITY</span>
+
+                        <div class="mdl-layout-spacer">
+
+                        </div>
+
+                        <nav class="mdl-navigation ">
+
+                            <a class="mdl-navigation__link" href="">
+                                <img src="images/ic_notifications_white_24px.svg"> <span class="mdl-badge mdl-badge--overlap" data-badge=""></span>
+                            </a>
+                            <a class="mdl-navigation__link" href="">
+                                <img src="images/ic_shopping_cart_white_24px.svg"> <span class="mdl-badge mdl-badge--overlap" data-badge=""></span>
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#tappesquisa" class="mdl-layout__tab is-active tabcolor">Pesquisa</a>
+                        <a href="#tapmoeda" class="mdl-layout__tab tabcolor">Moedas e Cupons</a>
+                        <a href="#tapperfil" class="mdl-layout__tab tabcolor">Perfil</a>
+                    </div>
+
+                </header>
+            
+            <div class="mdl-layout__content">
+                
+                <section class="mdl-layout__tab-panel is-active" id="tappesquisa">
+
+                        <div class="page-content">
+
+                            <ul class="demo-list-item mdl-list">
+
+                                <li class="mdl-list__item">
+                                    <img src="images/cinema.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                   Cinema
+                            </span>
+                                </li>
+
+                                <li class="mdl-list__item">
+                                    <img src="images/farmacia.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                  Farmacia
+                            </span>
+                                </li>
+
+                                <li class="mdl-list__item">
+                                    <img src="images/hotel.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                               Hotel
+                            </span>
+                                </li>
+
+                                <li class="mdl-list__item">
+                                    <img src="images/ic_location_city_black_24dp.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                    Loja de Departamentos
+                            </span>
+                                </li>
+
+                                <li class="mdl-list__item">
+                                    <img src="images/pizzaria.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            Pizzaria
+                            </span>
+                                </li>
+
+                                <li class="mdl-list__item">
+                                    <img src="images/restaurante.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            Restaurante
+                            </span>
+                                </li>
+
+                                <li class="mdl-list__item">
+                                    <img src="images/supermercado.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                               Supermercado
+                            </span>
+                                </li>
+
+                                <li class="mdl-list__item">
+                                    <img src="images/taxi.png">
+                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                               Taxi
+                            </span>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </section>
+                
+                <section class="mdl-layout__tab-panel" id="tapmoeda">
+
+                        <div class="divmoeda">
+
+                            
+                                <ul class="demo-list-item mdl-list">
+                                    <li class="mdl-list__item">
+                                        <img class="moeda1" src="images/oie_transparent (1).png">
+                                        <span class="mdl-list__item-primary-content" style="margin-left:2%;color:white;">100</span>
+                                    </li>
+                                </ul>
+
+                            <div>
+
+                                <img class="moeda2" src="images/oie_RbGpmC5xIcUY.png">
+                                <span style="font-size:8px;color:white;margin-left:5px;margin-top:5px;">Clique para ganhar moedas</span>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </section>
+                
+                <section class="mdl-layout__tab-panel" id="tapperfil">
+
+                        <div class="page-content">
+
+                            <div class="demo-card-wide mdl-card card2">
+
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Olá,<span id="nuser" style="margin-left:10px;"></span></h2>
+                                </div>
+
+                                <div class="mdl-card__supporting-text">
+                                    <ul class="demo-list-item mdl-list">
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/home.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                       Inicio
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/carrinho.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                        Carrinho de compras
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/mensagem.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                          Mensagem
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/pedido.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                        Meus pedidos
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/config.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                        Configurações
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/feedback.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                        Enviar FeedBack
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/ajuda.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                        Ajuda
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <img src="images/info.png">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                        Info
+                                    </span>
+                                        </li>
+
+                                        <li class="mdl-list__item">
+                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                                        Sair
+                                    </span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+                
+            </div>
+        
+        </div>
+        
+        
+        <!------------ Pagina cinema ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="cinema">
+             
+            <nav class="navbar navbar-default" style="background-color:#1665c0;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Cinema</p>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="mdl-layout__content">
+                
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                    <select id="cine1" class="date required mdl-selectfield__select" required>
+                        <option>Tradicional</option>
+                        <option>2D</option>
+                        <option>3D</option>
+                        <option>4DX</option>
+                        <option>Imax</option>
+                        <option>Macro XE</option>
+                        <option>XD</option>   
+                     </select>
+                     
+                    <label for="cine1" class="mdl-selectfield__label">Sala</label>
+                    
+                </div>
+                
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:30px;">
+                    <select id="cine2" class="date required mdl-selectfield__select" required>
+                        <option>Menor</option>
+                        <option>Maior</option>
+                        <option>Todos</option>
+                     </select>
+                     
+                    <label for="cine2" class="mdl-selectfield__label">Valor</label>
+                    
+                </div>
+                
+                <button class="mdl-button mdl-js-button mdl-button--icon" id="btcine" style="margin-top:15px;margin-left:30px;">
+                    <i class="material-icons">search</i>
+                </button>
+                
+                <ul class="demo-list-two mdl-list " id="cine"></ul>
+                
+            </div>
+            
+            <footer class="mdl-mini-footer" style="background-color:transparent;">
+
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <a href="#">
+                                <img src="images/ic_location_on_black_24px.svg">
+                            </a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Reservar</a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Adicionar ao carrinho</a>
+                        </li>
+                    </ul>
+
+            </footer>
+        
+        </div>
+        
+        
+        <!------------ Pagina farmacia ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="farmacia">
+            
+            <nav class="navbar navbar-default" style="background-color:#1665c0;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Farmacia</p>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="mdl-layout__content">
+                
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:200px;margin-top:15px;margin-left:10px;">
+                    <select id="farm1" class="date required mdl-selectfield__select" required>
+                        <option>todos de a-z</option>
+                        <option>genericos de a-z</option>
+                        <option>alergias e infecções</option>
+                        <option>anticoncepcionais</option>
+                        <option>anti-inflamatórios</option>
+                        <option>anti-tabagismo</option>
+                        <option>Tradicional</option>
+                        <option>asma</option>
+                        <option>calmantes</option>
+                        <option>congestão nasal</option>
+                        <option>diabetes</option>
+                        <option>dor e febre</option>
+                        <option>dor de garganta</option>
+                        <option>emagrecedores</option>
+                        <option>gripe e resfriado</option>
+                        <option>gastrite</option>
+                        <option>hipertensão</option>
+                        <option>tosse</option>   
+                     </select>
+                     
+                    <label for="farm1" class="mdl-selectfield__label">Medicamento</label>
+                    
+                </div>
+                
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:10px;">
+                    <select id="farm3" class="date required mdl-selectfield__select" required>
+                        <option>Menor</option>
+                        <option>Maior</option>
+                        <option>Todos</option>
+                     </select>
+                     
+                    <label for="farm3" class="mdl-selectfield__label">Valor</label>
+                    
+                </div>
+                
+                <button class="mdl-button mdl-js-button mdl-button--icon" id="btfarm" style="margin-top:15px;margin-left:8px;">
+                    <i class="material-icons">search</i>
+                </button>
+                
+                <ul class="demo-list-two mdl-list" id="pharm"></ul>
+                
+            </div>
+           
+            <footer class="mdl-mini-footer" style="background-color:transparent;">
+
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <a href="#">
+                                <img src="images/ic_location_on_black_24px.svg">
+                            </a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Reservar</a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Adicionar ao carrinho</a>
+                        </li>
+                    </ul>
+
+            </footer>
+            
+        </div>
+        
+        
+        <!------------ Pagina hotel ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="hotel">
+            
+            <nav class="navbar navbar-default" style="background-color:#1665c0;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Hotel</p>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="mdl-layout__content">
+             
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:15px;">
+                    <select id="hotel1" class="date required mdl-selectfield__select" required>
+                        <option>individual</option>
+                        <option>duplo</option>
+                        <option>familia</option>
+                        <option>multiplos</option>   
+                     </select>
+                     
+                    <label for="hotel1" class="mdl-selectfield__label">Quarto</label>
+                    
+                </div>
+                
+                
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:30px;">
+                    <select id="hotel2" class="date required mdl-selectfield__select" required>
+                        <option>Menor</option>
+                        <option>Maior</option>
+                        <option>Todos</option>
+                     </select>
+                     
+                    <label for="hotel2" class="mdl-selectfield__label">Valor</label>
+                    
+                </div>
+                
+                <button class="mdl-button mdl-js-button mdl-button--icon" id="bthotel" style="margin-top:15px;margin-left:30px;">
+                    <i class="material-icons">search</i>
+                </button>
+                
+                <ul class="demo-list-two mdl-list" id="ulhotel"></ul>
+                
+            </div>
+            
+            <footer class="mdl-mini-footer" style="background-color:transparent;">
+
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <a href="#">
+                                <img src="images/ic_location_on_black_24px.svg">
+                            </a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Reservar</a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Adicionar ao carrinho</a>
+                        </li>
+                    </ul>
+
+            </footer>
+            
+        </div>
+        
+        
+        <!------------ Pagina loja de departamento ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="lojadepar">
+            
+            <nav class="navbar navbar-default" style="background-color:#1665c0;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Loja de departamentos</p>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="mdl-layout__content">
+                
+                <ul class="demo-list-item mdl-list">
+                    
+                    <li class="mdl-list__item">
+                         <img src="images/mf.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            moda feminina
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                         <img src="images/mm.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            moda masculina
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                         <img src="images/bm.jpg">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            mamãe e bebê
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item"> 
+                         <img src="images/bs.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            bolsas e sapatos
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                         <img src="images/el.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            esporte e lazer
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                         <img src="images/jr.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            jóias e relógios
+                         </span>
+                         
+                     </li>
+                   
+                    <!-- img aqui -->
+                    <li class="mdl-list__item">
+                         
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            telefones e acessórios
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                        
+                         <img src="images/e.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            eletronicos
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                        
+                         <img src="images/cj.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            casa e jardim
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                        
+                         <img src="images/cr.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            computadores e redes
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                        
+                         <img src="images/bls.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            beleza e saúde
+                         </span>
+                         
+                     </li>
+                    <!-- img aqui -->
+                     <li class="mdl-list__item">
+                        
+                        
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            automoveis  motocicletas
+                         </span>
+                         
+                     </li>
+                    
+                    <li class="mdl-list__item">
+                        
+                         <img src="images/fe.png">
+                         <span class="mdl-list__item-primary-content" style="margin-left:10px;">
+                            ferramentas e equipamentos
+                         </span>
+                         
+                     </li>
+                    
+                </ul>
+            
+            </div>
+            
+        </div>
+        
+    </body>
+
+</html>
