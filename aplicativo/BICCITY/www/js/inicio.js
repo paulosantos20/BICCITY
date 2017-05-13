@@ -13,7 +13,7 @@ function initial() {
                $("#msg").html("Fazendo login e entrando!!");
                $("#nuser").html("paulo!!");
                clearInterval(id);
-               activate_page("#lojadepar"); 
+               activate_page("#modafem"); 
                 
                return false;
               
