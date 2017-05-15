@@ -1015,7 +1015,667 @@
         </div>
         
         <!------------ Pagina moda masculina ---------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="modamasc"></div>
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="modamasc">
+            
+            <header class="mdl-layout__header">
+
+                    <div class="navbar-header" style="background-color:#1665c0;">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Moda Masculina</p>
+                        
+                    </div>
+
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#tend" class="mdl-layout__tab is-active tabcolor" >Moda</a>
+                        <a href="#inverno" class="mdl-layout__tab tabcolor">Inverno</a>
+                        <a href="#bas" class="mdl-layout__tab tabcolor">Basico</a>
+                        <a href="#intima" class="mdl-layout__tab tabcolor" >Roupa interior</a>
+                        
+                    </div>
+
+             </header>
+            
+            <div class="mdl-layout__content">
+                
+                <section class="mdl-layout__tab-panel is-active" id="tend">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mm1" class="date required mdl-selectfield__select" required>
+                                    <option>moletons</option>
+                                    <option>camisetas</option>
+                                    <option>camisas</option>
+                                    <option>camisas polos</option> 
+                                    <option>blazers</option>
+                                    <option>meias</option> 
+                                </select>
+                     
+                         <label for="mm1" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mm2" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mm2" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmm1" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmm1"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="inverno">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mm3" class="date required mdl-selectfield__select" required>
+                                    <option>jaquetas</option>
+                                    <option>casaco</option>
+                                    <option>casaco em couro sintetico</option>
+                                    <option>sueteres</option> 
+                                    <option>casaco de malha</option>
+                                    <option>sobretudos</option> 
+                                    <option>camisa de flanela</option> 
+                                </select>
+                     
+                         <label for="mm3" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mm4" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mm4" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmm2" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmm2"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="bas">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mm5" class="date required mdl-selectfield__select" required>
+                                    <option>calções</option>
+                                    <option>calçoes de praia</option>
+                                    <option>jeans</option>
+                                    <option>calça casual</option> 
+                                    <option>calça confortaveis</option> 
+                                </select>
+                     
+                         <label for="mm5" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mm6" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mm6" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmm3" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmm3"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="intima">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mm7" class="date required mdl-selectfield__select" required>
+                                    <option>boxers</option>
+                                    <option>cuecas</option>
+                                    <option>ceroulas</option>
+                                    <option>pijamas</option>  
+                                </select>
+                     
+                         <label for="mm7" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mm8" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mm8" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmm4" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmm4"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+            </div>
+            
+            <footer class="mdl-mini-footer" style="background-color:transparent;">
+
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <a href="#">
+                                <img src="images/ic_location_on_black_24px.svg">
+                            </a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Reservar</a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Adicionar ao carrinho</a>
+                        </li>
+                    </ul>
+
+            </footer>
+       
+        </div>
+        
+        <!------------ Pagina mamae e bebe ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="mombaby">
+            
+            <header class="mdl-layout__header">
+
+                    <div class="navbar-header" style="background-color:#1665c0;">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Mamãe e bebê</p>
+                        
+                    </div>
+
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#mb" class="mdl-layout__tab is-active tabcolor" >Moda bebe</a>
+                        <a href="#menina" class="mdl-layout__tab tabcolor">Meninas</a>
+                        <a href="#menino" class="mdl-layout__tab tabcolor">Meninos</a>
+                        <a href="#seb" class="mdl-layout__tab tabcolor" >Brinquedos</a>
+                        
+                    </div>
+
+             </header>
+            
+            <div class="mdl-layout__content">
+                
+                <section class="mdl-layout__tab-panel is-active" id="mb">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mb1" class="date required mdl-selectfield__select" required>
+                                    <option>vestidos</option>
+                                    <option>macacoes</option>
+                                    <option>conjuntos</option>
+                                    <option>casacos</option> 
+                                    <option>calças</option>
+                                    <option>acessorios</option> 
+                                    <option>primeiros passos</option> 
+                                    <option>bolsas infantis</option> 
+                                </select>
+                     
+                         <label for="mb1" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mb2" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mb2" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmb1" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmb1"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="menina">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mb3" class="date required mdl-selectfield__select" required>
+                                    <option>vestidos</option>
+                                    <option>conjuntos</option>
+                                    <option>camisetas e moletons</option>
+                                    <option>saias</option> 
+                                    <option>acessorios</option>
+                                    <option>tal mãe tal filha</option> 
+                                    <option>sapatos de meninas</option> 
+                                </select>
+                     
+                         <label for="mb3" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mb4" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mb4" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmb2" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmb2"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="menino">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mb5" class="date required mdl-selectfield__select" required>
+                                    <option>conjuntos</option>
+                                    <option>camisetas</option>
+                                    <option>moletons</option>
+                                    <option>jaquetas e casacos</option> 
+                                    <option>jeans</option>
+                                    <option>acessorios</option> 
+                                    <option>sapatos de meninos</option> 
+                                </select>
+                     
+                         <label for="mb5" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mb6" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mmb6" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmb3" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmb3"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="seb">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="mb7" class="date required mdl-selectfield__select" required>
+                                    <option>brinquedo de controle remoto</option>
+                                    <option>pelucias</option>
+                                    <option>inspirados em animação</option>
+                                    <option>blocos e kit de montas</option> 
+                                    <option>brincadeira ao ar livre</option>
+                                    
+                                </select>
+                     
+                         <label for="mb7" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="mb8" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="mb8" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btmb4" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulmb4"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+            </div>
+            
+            <footer class="mdl-mini-footer" style="background-color:transparent;">
+
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <a href="#">
+                                <img src="images/ic_location_on_black_24px.svg">
+                            </a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Reservar</a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Adicionar ao carrinho</a>
+                        </li>
+                    </ul>
+
+            </footer>
+            
+        </div>
+        
+        <!------------ Pagina bolsas e sapatos ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="bolsap">
+            
+            <header class="mdl-layout__header">
+
+                    <div class="navbar-header" style="background-color:#1665c0;">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Bolsas e sapatos</p>
+                        
+                    </div>
+
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#bolsa" class="mdl-layout__tab is-active tabcolor" >Bolsa Fem.</a>
+                        <a href="#sapato" class="mdl-layout__tab tabcolor">Sapato Fem.</a>
+                        <a href="#woman" class="mdl-layout__tab tabcolor">Bolsa Masc.</a>
+                        <a href="#man" class="mdl-layout__tab tabcolor" >Sapato Masc.</a>
+                        
+                    </div>
+
+             </header>
+            
+            <div class="mdl-layout__content">
+                
+                <section class="mdl-layout__tab-panel is-active" id="bolsa">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="bs1" class="date required mdl-selectfield__select" required>
+                                    <option>bolsas de ombro</option>
+                                    <option>bolsas de mão</option>
+                                    <option>bolsas mensageiro e tiracolo</option>
+                                    <option>carteiras</option> 
+                                    <option>mochilas</option>
+                                    <option>clutches</option> 
+                                    <option>porta moedas e documentos</option> 
+                                    <option>bolsas de viagem</option>
+                                    <option>conjuntos de malas</option>
+                                    <option>malas avulsas</option>
+                                    <option>bolsas de cosmeticos</option>
+                                </select>
+                     
+                         <label for="bs1" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="bs2" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="bs2" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btbs1" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulbs1"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="sapato">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="bs3" class="date required mdl-selectfield__select" required>
+                                    <option>sandalias</option>
+                                    <option>salto alto</option>
+                                    <option>chinelos</option>
+                                    <option>botas</option> 
+                                    <option>oxfords</option>
+                                    <option>calçados femininos vulcanizados</option> 
+                                    <option>apartamentos para mulheres</option> 
+                                    <option>botas tornozelo</option> 
+                                    <option>botas acima do joelho</option>
+                                    <option>sandálias de cunha</option> 
+                                    <option>sandálias plataforma</option>
+                                    <option>sandálias tiras cruzadas</option> 
+                                    <option>tamancos</option> 
+                                </select>
+                     
+                         <label for="bs3" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="bs4" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="bs4" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btbs2" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulbs2"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="woman">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="bs5" class="date required mdl-selectfield__select" required>
+                                    <option>mochilas</option>
+                                    <option>bolsas atravessadas</option>
+                                    <option>pastas de maletas</option>
+                                    <option>carteiras</option> 
+                                </select>
+                     
+                         <label for="bs5" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="bs6" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="bs6" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btbs3" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulbs3"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="man">
+                  
+                <div class="page-content">
+                    
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:150px;margin-top:15px;margin-left:15px;">
+                                <select id="bs7" class="date required mdl-selectfield__select" required>
+                                    <option>calçados casuais</option>
+                                    <option>sandalias</option>
+                                    <option>oxfords</option>
+                                    <option>botas</option> 
+                                    <option>chinelos</option> 
+                                </select>
+                     
+                         <label for="bs7" class="mdl-selectfield__label">Categoria</label>
+                   
+                        </div>
+                        
+                        <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;margin-top:15px;margin-left:20px;">
+                                <select id="bs8" class="date required mdl-selectfield__select" required>
+                                    <option>Menor</option>
+                                    <option>Maior</option>
+                                    <option>Todos</option>
+                                </select>
+                     
+                            <label for="bs8" class="mdl-selectfield__label">Valor</label>
+                    
+                        </div>
+                
+                        <button class="mdl-button mdl-js-button mdl-button--icon" id="btbs4" style="margin-top:15px;margin-left:30px;">
+                                <i class="material-icons">search</i>
+                        </button>
+                
+                        <ul class="demo-list-two mdl-list" id="ulbs4"></ul>
+                
+                    </div>      
+                    
+                </section>
+                
+            </div>
+            
+            <footer class="mdl-mini-footer" style="background-color:transparent;">
+
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <a href="#">
+                                <img src="images/ic_location_on_black_24px.svg">
+                            </a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Reservar</a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Adicionar ao carrinho</a>
+                        </li>
+                    </ul>
+
+            </footer>
+        
+        </div>
+        
+        <!------------ Pagina esporte e lazer ---------------->
+        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="esplaz">
+            
+             <header class="mdl-layout__header">
+
+                    <div class="navbar-header" style="background-color:#1665c0;">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/ic_arrow_back_white_24px.svg">
+                        </a>
+                        <p class="navbar-text" style="color:white;font-size:22px">Bolsas e sapatos</p>
+                        
+                    </div>
+
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#bolsa" class="mdl-layout__tab is-active tabcolor" >Itens esportivo</a>
+                        <a href="#sapato" class="mdl-layout__tab tabcolor">Tenis</a>
+                        <a href="#woman" class="mdl-layout__tab tabcolor">Roupa</a>
+                        <a href="#man" class="mdl-layout__tab tabcolor" >Instrumentos</a>
+                        
+                    </div>
+
+             </header>
+            
+            <div class="mdl-layout__content">
+                
+                
+                
+            </div>
+            
+            <footer class="mdl-mini-footer" style="background-color:transparent;">
+
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <a href="#">
+                                <img src="images/ic_location_on_black_24px.svg">
+                            </a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Reservar</a>
+                        </li>
+                        <li style="margin-left:20px;"><a href="#">Adicionar ao carrinho</a>
+                        </li>
+                    </ul>
+
+            </footer>
+            
+            
+        </div>
+        
         
     </body>
 
