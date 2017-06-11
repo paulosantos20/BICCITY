@@ -113,28 +113,6 @@ body {
     width:100%;
 }
 
-.moeda1{
-    height:20px;
-    width:20px;
-    margin-left:2%;
-}
-
-.moeda2{
-    height:80px;
-    width:80px;
-    margin-top:2%;
-    margin-left:35%;
-}
-
-.divmoeda{
-    background-color:#1665c0;
-    width:100%;
-}
-
-.divmoeda1{
-    margin-top:10%;
-    margin-left:5%;
-}
 
 .card3{
     margin-top:10%;
@@ -142,29 +120,54 @@ body {
     width:90%;
 }
 
-.imgmoeda{
-    height:40%;
-    width:40%;
-    margin-top:2%;
-    margin-left:1%;
-    float:left;
+
+.divprin{
+    background: url('../images/degrade.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 170px;
 }
 
-.imgcupon{
-    height:50%;
-    width:50%;
-    margin-top:5%;
-    margin-left:5%;
-    float:left;
+.d1{
+    width: 34%;
+    height: 150px;
+    background-color: transparent;
+    float: left;
+    
+}
+
+.d2{
+    width: 33%;
+    height: 150px;
+    background-color: transparent;
+    float: left;
+}
+
+.d3{
+    width: 33%;
+    height: 150px;
+    background-color: transparent;
+    float: left;
 }
 
 
-.divcupon{
-   margin-top:5%;
-   margin-left:5%;
-   width:90%;
-   height:50px;
+
+.moeda{
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 80%;
+    height: 70%;
 }
+
+.numd{
+    margin-top: 20%;
+    margin-left: 5%;
+    font-size: 18px;
+    
+}
+
+
 
 .div1{
    margin-top:5%;
