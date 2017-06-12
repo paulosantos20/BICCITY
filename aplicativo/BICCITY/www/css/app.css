@@ -151,7 +151,49 @@ body {
     float: left;
 }
 
+.divmc{
+    width: 90%;
+    height: 120px;
+    margin-left: 5%;
+    margin-top: 10%;
+    background-color: white;
+}
 
+.dmc1{
+    width: 33%;
+    height: 100px;
+    background-color: none;
+    float: left;
+}
+
+.dmc2{
+    width: 33%;
+    height: 100px;
+    background-color: none;
+    float: left;
+}
+
+.dmc3{
+    width: 33%;
+    height: 100px;
+    background-color: none;
+    float: left;
+}
+
+.imgcupon{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.imgfilhote{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.imgwm{
+    margin-left: 10%;
+    margin-top: 5%;
+}
 
 .moeda{
     margin-top: 15%;
