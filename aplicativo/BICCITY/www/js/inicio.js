@@ -13,7 +13,7 @@ function initial() {
                $("#msg").html("Fazendo login e entrando!!");
                $("#nuser").html("paulo!!");
                clearInterval(id);
-               activate_page("#user"); 
+               activate_page("#puppy"); 
                 
                return false;
               

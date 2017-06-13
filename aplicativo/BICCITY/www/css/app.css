@@ -234,3 +234,18 @@ body {
 .demo-list-radio {
   display: inline;
 }
+
+.bpuppy{
+     background: url('../images/fundo_filhote.png'); 
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgpuppy{
+    margin-left:40%;
+    margin-top: 80%;
+}
+
+
+
+
