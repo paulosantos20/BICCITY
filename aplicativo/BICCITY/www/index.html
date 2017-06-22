@@ -71,10 +71,20 @@
         <script type="application/javascript" src="js/mdl-selectfield.min.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         
+        <link rel="stylesheet" href="css/sweetalert.css">
+        <script type="application/javascript" src="js/sweetalert.min.js"></script>
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script type="application/javascript" src="js/bootstrap.min.js"></script>
+        
         
         <script type="application/javascript" src="js/index_user_scripts.js"></script>
         <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
         <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
         
         <link href="css/jquery-ui.min.css">
         <link href="css/jquery-ui.structure.min.css">
@@ -83,7 +93,7 @@
         <script src="js/jquery.slim.min.js"></script>
         <script src="js/jquery.min.js"></script>
         
-      <!--     
+      <!---     
         <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
         <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
         <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
@@ -92,17 +102,20 @@
         <script src="js/materialize.min.js"></script>
         
         <link href="css/getmdl-select.min.css">
-        <script src="js/getmdl-select.min.js"></script>  -->
+        <script src="js/getmdl-select.min.js"></script>  --->
 
         <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
         <script src="js/bootstrap-datepicker.min.js"></script>
         <script type="application/javascript" src="js/inicio.js"></script>
+        <script type="application/javascript" src="js/puppymagic.js"></script>
 
         <script>
             $( function() {
                     $( "#datepicker" ).datepicker({format: 'dd/mm/yyyy',language: 'pt-BR',autoclose: true});
                 } );
         </script>
+        
+          
 
     </head> 
 
@@ -503,22 +516,46 @@
             
             <div class="mdl-layout__content">
                 
-                <img class="imgpuppy" src="images/panda1.png">
                 
-                <div id="container">
+                <div class="divt1">
                     
-                    <div class="barOuter">
+                        <img class="imgpuppy" id="imgpuppy" src="images/panda1.png">
+                        
+                        <div id="container">
                     
-                        <div class="barInner" aria-valuemax="1000" style="width:0%"></div>
-                        <p style="margin-left:27%;"><span>0</span>/1000</p>
+                            <div class="barOuter">
                     
-                    </div>
+                                <div class="barInner" id="progress" aria-valuemax="1000" style="width:0%"></div>
+                                <p style="margin-left:27%;"><span id="percent">0</span>/1000</p>
+                    
+                            </div>
+                   
+                        </div>
+                    
+                        <div class="divbambo" id="teste">
+                    
+                            <div class="divbtbb" id="comida" style="position:relative;">
+                                    <img style="margin-left:10px;" src="images/bamboo.png">
+                                    <span style="margin-left:3px;"><span id="bval">5</span> /5</span>
+                            </div>
+                    
+                        </div>
                     
                 </div>
                 
+                <div class="divt2" id="pmsg">
+                    
+                    <p style="margin-left:10px;margin-top:10px;">Obrigado por alimentar nosso filhote!!</p>
+                    <img style="margin-left:30%;" src="images/pandinha.gif">
+                    <p style="margin-left:10px;">Agora ele está feliz e vai brincar o dia todo.</p>
+                    <button class="mdl-button mdl-js-button mdl-button--raised" style="margin-left:70%;border:none">OK</button>
+                </div>  
+                
             </div>
-            
+                
         </div>
+            
+       
         
         
     </body>

@@ -244,6 +244,8 @@ body {
 .imgpuppy{
     margin-left:40%;
     margin-top: 80%;
+    position: relative;
+    
 }
 
 .barOuter {
@@ -274,14 +276,94 @@ body {
     width: 50%;
     background-size: 100% 100%, 20px 20px, 100% 100%;
     background-image:
+        linear-gradient(to bottom,
+                        rgba(255, 255, 255, 0.33) 0,
+                        rgba(255, 255, 255, 0.08) 50%,
+                        rgba(0, 0, 0, 0.25) 50%,
+                        rgba(0, 0, 0, 0.1) 100%),
+        linear-gradient(45deg,
+                        rgba(255, 255, 255, 0.16) 25%,
+                        rgba(0, 0, 0, 0) 25%,
+                        rgba(0, 0, 0, 0) 50%,
+                        rgba(255, 255, 255, 0.16) 50%,
+                        rgba(255, 255, 255, 0.16) 75%,
+                        rgba(0, 0, 0, 0) 75%,
+                        rgba(0, 0, 0, 0)),
+        linear-gradient(to right, #09c, #f44);
+    box-shadow: inset 0 1px 1px 0px rgba(255, 215, 215, 0.5),
+                inset 0 -1px 1px 0px rgba(255, 255, 255, 0.25),
+                1px 1px 3px 0 rgba(0,0,0,0.33);
+}
+/*.barInner {
+    background-color: #A444B1;
+    border-right: 1px solid #090909;
+    border-radius: 7px;
+    height: 100%;
+    width: 50%;
+    background-size: 100% 100%, 20px 20px, 100% 100%;
+    background-image:
         linear-gradient(-45deg,transparent 33%, rgba(0, 0, 0, .1) 33%,rgba(0,0, 0, .1) 66%, transparent 66%),
         linear-gradient(to top,rgba(255, 255, 255, .25),rgba(0, 0, 0, .25)),
         linear-gradient(to left, #09c, #f44);
 
+ linear-gradient(to right, #5A377F, #A444B1);
+
 border-radius: 2px;
 background-size: 35px 20px, 100% 100%, 100% 100%;
+} */
+
+.divbambo{
+    width: 100%;
+    height: 30px;
+    margin-top: 10%;
+    background-color: none;
+    position: relative;
+   
+}
+
+.divbtbb{
+    background-color: white;
+    border-radius: 90px;
+    width: 80px;
+    height: 25px;
+    margin-top: 2%;
+    margin-left: 75%;
+    position: relative;
+    
+}
+
+.divmsgg{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    z-index: 1;
+    margin-left: 40%;
+    position: absolute;
+    
+}
+
+.divt1{
+    position:absolute; 
+    left:1px; 
+    top:0px;
+    height:100%;
+    width:100%;
+    z-index:1;
+    background-color:none;
 }
 
 
+.divt2{
+    position:absolute; 
+    left:1px; 
+    top:1px;
+    height:40%;
+    width:80%;
+    z-index:2;
+    background-color:gainsboro;
+    margin-top: 45%;
+    margin-left: 10%;
+   /* display: none; */
+}
 
 
