@@ -4,6 +4,8 @@
 $(document).ready(function(){
     var $pv=0.2;
     var $np=0;
+    var $abriu = false;
+    
     $(document).on("click", "#comida", function(evt){
         
         var $valor = $("#bval").html();
@@ -26,19 +28,37 @@ $(document).ready(function(){
             
         }
         
-        if($valor ==0){
+       
+        if($valor == false){
             $("#bval").html($valor);
             
             document.getElementById("imgpuppy").src = "../images/panda3.png";
              
             $("#progress").css('width', $pv + '%');
-            document.getElementById("pmsg").style.display = "block";
-            //alert(" Obrigado por alimentar nosso bebê,\n Agora ele está feliz e bem alimentado!",function(){},"");  
+            
+            if($abriu == false){
+                 document.getElementById("pmsg").style.display = "block";
+                 $abriu =true;
+            }
+            
+               
+           
             
         }
         
         
     });
     
+    $(document).on("click", "#btpmsg", function(evt){
+       
+        document.getElementById("pmsg").style.display = "none";
+        
+    });
+    
+    $(document).on("click", "#btpmsg1", function(evt){
+       
+        document.getElementById("pmsg1").style.display = "none";
+        
+    });
     
 });
