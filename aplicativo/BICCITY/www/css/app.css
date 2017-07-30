@@ -379,4 +379,41 @@ background-size: 35px 20px, 100% 100%, 100% 100%;
     display: none;
 }
 
+.divt4{
+    position:absolute; 
+    left:1px; 
+    top:10px;
+    height:10%;
+    width:100%;
+    z-index:1;
+    background-color: none;
+}
+
+.divpuser{
+    background-color: white;
+    border-radius: 90px;
+    width: 45%;
+    height: 30px;
+    margin-top: 2%;
+    margin-left: 2%;
+    float: left;
+}
+
+.divnp{
+    background-color: white;
+    border-radius: 90px;
+    width: 18%; 
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 2%;
+    float: left;
+}
+
+.divph{
+    background-color: none;
+    margin-left: 60px;
+    margin-top: 2%;
+    float: left;
+}
+
 

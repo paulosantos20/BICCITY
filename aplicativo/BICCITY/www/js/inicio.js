@@ -14,7 +14,8 @@ function initial() {
                $("#nuser").html("paulo!!");
                clearInterval(id);
               
-               activate_page("#user"); 
+          //     activate_page("#user"); 
+              activate_page("#puppy"); 
                 
                return false;
               
