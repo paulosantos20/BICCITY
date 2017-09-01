@@ -508,6 +508,9 @@
         </div>
         
         
+        
+        <!----------------------------------- paginas Tab moedas e cupons -------------------------------------------------------->
+        
         <!-------------Pagina filhote magico----------------------------->
         <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs bpuppy" id="puppy">
         
@@ -767,13 +770,13 @@
                 
                 
                 <div class="list-group">
-              <!--      <a class="list-group-item" style="margin-top:10px;">
+                 <!--  <a class="list-group-item" style="margin-top:10px;">
                         <h4 class="list-group-item-heading">R$ 10,00</h4>
                         <p class="list-group-item-text">Nome da loja: <span> Americanas</span></p>
                         <p class="list-group-item-text">Validade até: <span>16/08/17</span></p>
                         <p class="list-group-item-text">Trocar por <span>50</span> moedas</p>
                         <p class="list-group-item-text">Cupons disponiveis: 100</p>
-                    </a> -->
+                    </a>  -->
                 </div>
             
             </div>
@@ -781,21 +784,99 @@
         </div>
         
         
+        
+        
+        <!--------------------------------------------- paginas Tab perfil -------------------------------------------------------->
+        
         <!-------------Pagina de mensagem ----------------------------->
         <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="pgmensagem">
             
                 <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Mensagem</p>
+
+                    <div class="mdl-layout__header-row headercolor">
+
+                        <span class="mdl-layout-title">Mensagem</span>
+
+                        <div class="mdl-layout-spacer">
+
+                        </div>
+
+                        <nav class="mdl-navigation ">
+
+                            <a class="mdl-navigation__link" href="">
+                                <img src="images/icon_delete.svg">
+                            </a>
+                            <a class="mdl-navigation__link" href="">
+                                <img src="images/icon_done.svg">
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#tabsystem" class="mdl-layout__tab is-active tabcolor">Mensagem do sistema</a>
+                        <a href="#tabvend" class="mdl-layout__tab tabcolor">Mensagem de vendedor</a>
+                    </div>
+
+                </header>
+            
+            
+            <div class="mdl-layout__content">
+                
+                <section class="mdl-layout__tab-panel is-active" id="tabsystem">
+
+                    <div class="page-content">
+                        
+                        <ul class="demo-list-three mdl-list">
+                            
+                            <div class="list-group">
+                                <a class="list-group-item" style="margin-top:10px;">
+                                <h4 class="list-group-item-heading">
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-2">
+                                        <input type="checkbox" id="list-checkbox-2" class="mdl-checkbox__input" /><span> BICCITY</span>
+                                    </label>
+                                </h4>
+                                <span class="mdl-list__item-text-body">
+                                        Bem Vindo ao BICCITY.
+                                </span>
+                                </a>  
+                            </div>
+                            
+                        </ul>
+                        
+                       
+                    
+                    </div>
+                    
+                </section>
+                
+                <section class="mdl-layout__tab-panel" id="tabvend">
+
+                    <div class="page-content">
+                   
+                        <ul class="demo-list-three mdl-list">
+                            
+                            <div class="list-group">
+                                    <a class="list-group-item" style="margin-top:10px;">
+                                    <h4 class="list-group-item-heading">
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+                                            <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" /><span> Americanas</span>
+                                        </label>
+                                    </h4>
+                                    <span class="mdl-list__item-text-body">
+                                                Sua reserva foi enceraada hoje!!
+                                    </span>
+                                    </a>  
+                            </div>
+                            
+                        </ul>
                         
                     </div>
-                
-             </header>
+                    
+                </section>
             
-            <div class="mdl-layout__content"></div>
+            </div>
 
         
         </div>
@@ -805,17 +886,43 @@
         <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="pgcarrinho">
             
                 <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Carrinho</p>
-                        
+
+                    <div class="mdl-layout__header-row headercolor">
+
+                        <span class="mdl-layout-title">Carrinho de compras</span>
+
+                        <div class="mdl-layout-spacer">
+
+                        </div>
+
+                        <nav class="mdl-navigation ">
+
+                            <a class="mdl-navigation__link" href="">
+                                <img src="images/icon_delete.svg">
+                            </a>
+
+                        </nav>
+
                     </div>
-                
-             </header>
+
+
+                </header>
             
             <div class="mdl-layout__content"></div>
+            
+            <footer class="mdl-mini-footer" style="background-color:grey;">
+                   
+                    <div class="mdl-mini-footer__left-section">
+                            <span style="color:white;">Total <span></span></span>
+                    </div>
+  
+                    <div class="mdl-mini-footer__right-section">
+                        <a class="btn" style="background-color:red;color:white;">Reservar <span> (0)</span></a>
+                    </div>
+
+            </footer>
+            
+            
 
         
         </div>

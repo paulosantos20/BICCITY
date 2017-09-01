@@ -14,8 +14,8 @@ function initial() {
                $("#nuser").html("paulo!!");
                clearInterval(id);
               
-          //     activate_page("#user"); 
-              activate_page("#exchangecoupon"); 
+               activate_page("#user"); 
+           //  activate_page("#worldcoins");  
                 
                return false;
               
