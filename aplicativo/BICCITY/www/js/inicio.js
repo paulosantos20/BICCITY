@@ -14,8 +14,8 @@ function initial() {
                $("#nuser").html("paulo!!");
                clearInterval(id);
               
-               activate_page("#user"); 
-           //  activate_page("#worldcoins");  
+            //   activate_page("#user"); 
+             activate_page("#pgcarrinho");  
                 
                return false;
               
