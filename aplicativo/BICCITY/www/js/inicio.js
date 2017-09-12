@@ -15,7 +15,7 @@ function initial() {
                clearInterval(id);
               
             //   activate_page("#user"); 
-             activate_page("#pgcarrinho");  
+             activate_page("#denuncia");  
                 
                return false;
               
