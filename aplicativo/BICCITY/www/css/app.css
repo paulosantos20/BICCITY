@@ -512,4 +512,27 @@ background-size: 35px 20px, 100% 100%, 100% 100%;
    
 }
 
+.divt13{
+    position:absolute; 
+    left:10%; 
+    top:10%;
+    height:5%;
+    width:99%;
+    z-index:1;
+    background-color: none;
+   
+}
+
+.divt14{
+    position:absolute; 
+    left:10%; 
+    top:20%;
+    height:5%;
+    width:80%;
+    z-index:1;
+    background-color: blue;
+    display: none;
+    
+}
+
 

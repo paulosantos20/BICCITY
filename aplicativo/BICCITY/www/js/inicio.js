@@ -15,7 +15,7 @@ function initial() {
                clearInterval(id);
               
             //   activate_page("#user"); 
-             activate_page("#denuncia");  
+             activate_page("#info");  
                 
                return false;
               
