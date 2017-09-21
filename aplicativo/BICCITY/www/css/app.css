@@ -535,4 +535,10 @@ background-size: 35px 20px, 100% 100%, 100% 100%;
     
 }
 
+.fundoinfo{
+    background-image: url("../images/green-polygon-wallpaper-1.jpg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
