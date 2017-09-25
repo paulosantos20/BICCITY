@@ -541,4 +541,38 @@ background-size: 35px 20px, 100% 100%, 100% 100%;
     background-size: cover;
 }
 
+.divaddcar{
+    position: absolute;
+    left:5%; 
+    top:2%;
+    height:5%;
+    width:90%;
+    z-index:1;
+    background-color: none;
+    display: none;
+}
+
+.divreserva{
+    position: absolute;
+    left:5%; 
+    top:2%;
+    height:5%;
+    width:90%;
+    z-index:1;
+    background-color: none;
+    display: none;
+   
+}
+
+.divavaliar{
+    position: absolute;
+    left:5%; 
+    top:30%;
+    height:5%;
+    width:90%;
+    z-index:1;
+    background-color: none;
+    display: none;
+}
+
 

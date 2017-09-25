@@ -15,7 +15,7 @@ function initial() {
                clearInterval(id);
               
             //   activate_page("#user"); 
-             activate_page("#opcljdepar");  
+             activate_page("#resultcine");  
                 
                return false;
               
