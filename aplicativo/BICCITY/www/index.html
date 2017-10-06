@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <!--
+        <!--
   * Please see the included README.md file for license terms and conditions.
   -->
 
-    <head>
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-        <meta charset="UTF-8">
-        <title>Blank App Designer Cordova Web App Project Template</title>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <head>
+                <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+                <meta charset="UTF-8">
+                <title></title>
+                <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-        <!--
+                <!--
   * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
   * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
   * For a quick overview of "meta viewport" and @viewport, see this article:
@@ -22,2049 +22,352 @@
   *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
 -->
 
-        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
-        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+                <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+                <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+                <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
 
-        <style>
-            /* following three (cascaded) are equivalent to above three meta viewport statements */
-            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
-            /* see http://dev.w3.org/csswg/css-device-adapt/ */
-                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
-                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
-                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
-        </style>
+                <style>
+                        /* following three (cascaded) are equivalent to above three meta viewport statements */
+                            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+                            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+                </style>
 
-        <link rel="stylesheet" href="css/app.css">
-        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
-        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+                <link rel="stylesheet" href="css/app.css">
+                <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+                <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
 
-        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
-        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
-        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+                <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+                <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+                <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
 
-        <!-- Recommended location for your JavaScript libraries -->
-        <!-- These library references (below) are just examples to give you the general idea... -->
-        <!-- <script src="lib/mc/hammer.js"></script> -->
-        <!-- <script src="lib/ft/fastclick.js"></script> -->
+                <!-- Recommended location for your JavaScript libraries -->
+                <!-- These library references (below) are just examples to give you the general idea... -->
+                <!-- <script src="lib/mc/hammer.js"></script> -->
+                <!-- <script src="lib/ft/fastclick.js"></script> -->
 
-        <!--
+                <!--
   * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
   * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
   * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
   * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
 -->
-        <script src="cordova.js" id="xdkJScordova_"></script>
+                <script src="cordova.js" id="xdkJScordova_"></script>
 
-        <script src="js/app.js"></script>
-        <!-- for your event code, see README and file comments for details -->
-        <script src="js/init-app.js"></script>
-        <!-- for your init code, see README and file comments for details -->
-        <script src="xdk/init-dev.js"></script>
-        <!-- normalizes device and document ready events, see file for details -->
-        <script type="application/javascript" src="lib/jquery.min.js"></script>
-        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+                <script src="js/app.js"></script>
+                <!-- for your event code, see README and file comments for details -->
+                <script src="js/init-app.js"></script>
+                <!-- for your init code, see README and file comments for details -->
+                <script src="xdk/init-dev.js"></script>
+                <!-- normalizes device and document ready events, see file for details -->
+                <script type="application/javascript" src="lib/jquery.min.js"></script>
+                <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
 
-         <link rel="stylesheet" href="css/material.min.css">
-        <script type="application/javascript" src="js/material.min.js"></script>
-        <link rel="stylesheet" href="css/mdl-selectfield.min.css">
-        <script type="application/javascript" src="js/mdl-selectfield.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        
-        <link rel="stylesheet" href="css/sweetalert.css">
-        <script type="application/javascript" src="js/sweetalert.min.js"></script>
-        
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <script type="application/javascript" src="js/bootstrap.min.js"></script>
-        
-        
-        <script type="application/javascript" src="js/index_user_scripts.js"></script>
-        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
-        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-        
-        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
-        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
-        
-        <link href="css/jquery-ui.min.css">
-        <link href="css/jquery-ui.structure.min.css">
-        <link href="css/jquery-ui.theme.min.css">
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/jquery.slim.min.js"></script>
-        <script src="js/jquery.min.js"></script>
-        
-      <!---     
-        <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
-        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
-        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
-        
-        <link href="css/materialize.min.css">
-        <script src="js/materialize.min.js"></script>
-        
-        <link href="css/getmdl-select.min.css">
-        <script src="js/getmdl-select.min.js"></script>  --->
+                <!--------mdl js and css ------>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+                <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+                <script defer="" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-        <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
-        <script src="js/bootstrap-datepicker.min.js"></script>
-        <script type="application/javascript" src="js/inicio.js"></script>
-        <script type="application/javascript" src="js/puppymagic.js"></script>
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        <script>
-            $( function() {
-                    $( "#datepicker" ).datepicker({format: 'dd/mm/yyyy',language: 'pt-BR',autoclose: true});
-                } );
-        </script>
-        
-          
+                <!-- Optional theme -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    </head> 
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <body onload="initial()">
+                <script type="application/javascript" src="js/index_user_scripts.js"></script>
+                <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+                <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
-        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
-        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        
-        
-        
-        <!------------ Pagina mainpage ---------------->
-        <div class="upage demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header" id="mainpage">
+                <script type="application/javascript" src="js/inicio.js"></script> 
 
-                <img class="mage" src="images/logo2.png">
+        </head>
 
-                <div class="mdl-progress mdl-js-progress mdl-spinner--single-color mdl-progress__indeterminate" style="width:60%;margin-left:20%;margin-top:80%"></div>
+        <body onload="initial();">
+                <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+                <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+                <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
 
-                <div class="tp1">
-                    <span id="msg">  Carregando informações!!</span>
-                </div>   
+                <div class="upage demo-layout-transparent mdl-layout mdl-js-layout" id="mainpage"></div>
             
-               
-
-        </div>
-         
-        
-        <!------------ Pagina de cadastro e login ---------------->
-
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="cadlog">
-                
-             <header class="mdl-layout__header">
-
-                    <div class="mdl-layout__header-row headercolor">
-
-                        <span class="mdl-layout-title">BICCITY</span>
-                    </div>
-
-                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                        <a href="#cadastro" class="mdl-layout__tab is-active tabcolor">Cadastro</a>
-                        <a href="#login" class="mdl-layout__tab tabcolor">Login</a>
-
-                    </div>
-
-             </header>
-             
-            <div class="mdl-layout__content">
-            
-                <section class="mdl-layout__tab-panel is-active" id="cadastro">
-
-                        <div class="page-content">
-
-                            <div class="mdl-card mdl-shadow--4dp card">
-
-                                <div class="mdl-card__supporting-text">
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample1">
-                                        <label class="mdl-textfield__label" for="sample1">E-mail</label>
-                                    </div>
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample2">
-                                        <label class="mdl-textfield__label" for="sample2">Nome de usuario</label>
-                                    </div>
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample3">
-                                        <label class="mdl-textfield__label" for="sample3">Senha</label>
-                                    </div>
-
-                                </div>
-
-                                <div class="mdl-card__actions mdl-card--border">
-
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:5%;color:#1665c0;">
-                                Cadastrar
-                            </a>
-
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:10%;color:#1665c0;">
-                                Limpar
-                            </a>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </section>
-                
-                    <section class="mdl-layout__tab-panel" id="login">
-
-                        <div class="page-content">
-
-                            <div class="mdl-card mdl-shadow--4dp card1">
-
-                                <div class="mdl-card__supporting-text">
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample4">
-                                        <label class="mdl-textfield__label" for="sample4">Nome de usuario</label>
-                                    </div>
-
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="sample5">
-                                        <label class="mdl-textfield__label" for="sample5">Senha</label>
-                                    </div>
-                                        
-                                    <label style="color:#1665c0;">Esqueceu o login/senha?</label>
-                                    
-                                </div>
-
-                                <div class="mdl-card__actions mdl-card--border">
-
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:5%;color:#1665c0;">
-                                Entrar
-                            </a>
-
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="margin-left:10%;color:#1665c0;">
-                                Limpar
-                            </a>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </section>
-            
-            </div>
-            
-        </div>
-        
-        
-        <!------------ Pagina de usuario ---------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="user">
-        
-            <header class="mdl-layout__header">
-
-                    <div class="mdl-layout__header-row headercolor">
-
-                        <span class="mdl-layout-title">BICCITY</span>
-
-                        <div class="mdl-layout-spacer">
-
-                        </div>
-
-                        <nav class="mdl-navigation ">
-
-                            <a class="mdl-navigation__link" href="">
-                                <img src="images/ic_notifications_white_24px.svg"> <span class="mdl-badge mdl-badge--overlap" data-badge=""></span>
-                            </a>
-                            <a class="mdl-navigation__link" href="">
-                                <img src="images/ic_shopping_cart_white_24px.svg"> <span class="mdl-badge mdl-badge--overlap" data-badge=""></span>
-                            </a>
-
-                        </nav>
-
-                    </div>
-
-                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                        <a href="#tappesquisa" class="mdl-layout__tab is-active tabcolor">Pesquisa</a>
-                        <a href="#tapmoeda" class="mdl-layout__tab tabcolor">Moedas e Cupons</a>
-                        <a href="#tapperfil" class="mdl-layout__tab tabcolor">Perfil</a>
-                    </div>
-
-                </header>
-            
-            <div class="mdl-layout__content">
-                
-                <section class="mdl-layout__tab-panel is-active" id="tappesquisa">
-
-                        <div class="page-content">
-
-                            <ul class="demo-list-item mdl-list">
-
-                                <li class="mdl-list__item">
-                                    <img src="images/cinema.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                   Cinema
-                            </span>
-                                </li>
-
-                                <li class="mdl-list__item">
-                                    <img src="images/farmacia.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                  Farmacia
-                            </span>
-                                </li>
-
-                                <li class="mdl-list__item">
-                                    <img src="images/hotel.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                               Hotel
-                            </span>
-                                </li>
-
-                                <li class="mdl-list__item">
-                                    <img src="images/ic_location_city_black_24dp.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                    Loja de Departamentos
-                            </span>
-                                </li>
-
-                                <li class="mdl-list__item">
-                                    <img src="images/pizzaria.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                            Pizzaria
-                            </span>
-                                </li>
-
-                                <li class="mdl-list__item">
-                                    <img src="images/restaurante.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                            Restaurante
-                            </span>
-                                </li>
-
-                                <li class="mdl-list__item">
-                                    <img src="images/supermercado.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                               Supermercado
-                            </span>
-                                </li>
-
-                                <li class="mdl-list__item">
-                                    <img src="images/taxi.png">
-                                    <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                               Taxi
-                            </span>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                    </section>
-                
-                <section class="mdl-layout__tab-panel" id="tapmoeda">
-                    
-                    <div class="page-content">
-                    
-                      <div class="divprin">
-                           
-                          <div class="d1">
-                          
-                              <img class="moeda" src="images/oie_RbGpmC5xIcUY.png">
-                            
-                          </div>
-                          
-                          <div class="d2">
-                          
-                              <p class="numd">0</p>
-                              <p>Acesse diariamente e ganhe moedas</p>
-                          </div>
-                          
-                          <div class="d3" style="margin-lrft:5%;">
-                          
-                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-shadow--4dp" style="border-radius:90px;font-size:8px;margin-top:20%;margin-left:5%;background-color:white;color:#21afc3">Ganhe 01 Moedas</button> 
-                          
-                          </div>
-                          
-                          <div style="background-color:none;width:100%;height:40px;position:absolute;top:130px;">
-                          <button class="mdl-button mdl-js-button mdl-button--raised" style="margin-left:2%;">Moedas que ganhei</button>
-                          <button class="mdl-button mdl-js-button mdl-button--raised" style="margin-left:9%;">Regulamento</button>
-                            
-                              
-                          </div>
-                          
-                      </div>
-                        
-                      <div class="divmc mdl-shadow--4dp">
-                          
-                          <div class="dmc1">
-                            <img class="imgcupon" src="images/icon_cupon.png">
-                            <p style="font-size:8px;margin-left:5%;">Troque moedas por cupons</p>
-                          </div>
-                          
-                          <div class="dmc2">
-                            <img class="imgfilhote" src="images/icon_filhote.png">
-                            <p style="font-size:8px;margin-left:20%;">Filhote mágico</p>
-                          </div>
-                          
-                          <div class="dmc3">
-                            <img class="imgwm" src="images/icon_mmoeda.png">
-                            <p style="font-size:8px;margin-left:15%;">Jogue e ganhe moedas</p>
-                          </div>
-                          
-                      </div>     
-                    
-                    </div>
-
-
-                    </section>
-                
-                <section class="mdl-layout__tab-panel" id="tapperfil">
-
-                        <div class="page-content">
-
-                            <div class="demo-card-wide mdl-card card2">
-
-                                <div class="mdl-card__title">
-                                    <h2 class="mdl-card__title-text">Olá,<span id="nuser" style="margin-left:10px;"></span></h2>
-                                </div>
-
-                                <div class="mdl-card__supporting-text">
-                                    <ul class="demo-list-item mdl-list">
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/home.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                       Inicio
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/carrinho.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Carrinho de compras
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/mensagem.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                          Mensagem
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/pedido.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Meus pedidos
-                                    </span>
-                                        </li>
-                                        
-                                        <li class="mdl-list__item">
-                                            <img src="images/ic_receipt_black_24px.svg">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Meus cupons
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/config.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Configurações
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/feedback.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Enviar FeedBack
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/ajuda.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Ajuda
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <img src="images/info.png">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Info
-                                    </span>
-                                        </li>
-
-                                        <li class="mdl-list__item">
-                                            <span class="mdl-list__item-primary-content" style="margin-left:10px;">
-                                        Sair
-                                    </span>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
-                            
-                            <div class="divt14">
-                                
-                                  <div class="panel" style="background-color:#E6E8FA;">
-                            
-                                        <div class="panel-heading" >FeedBack</div>
-                                        <p style="margin-left:10px;" >De: <span>paulosantos465@gmail.com</span></p>
-                                
-                                <div class="mdl-textfield mdl-js-textfield" style="margin-left:10px;">
-                                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="feed" style="width:90%;" ></textarea>
-                                    <label class="mdl-textfield__label" for="feed">Escreva seu feedback</label>
-                                </div>
-                                
-                                <div class="panel-footer" style="background-color:#E6E8FA;">
-                             <button class="mdl-button mdl-js-button mdl-button--accent" style="margin-left:25%;">Cancelar</button>
-                             <button class="mdl-button mdl-js-button mdl-button--accent">Enviar</button>
-                                </div>
-                                      
-                                </div>
-               
-                            </div>
-
-                        </div>
-
-                    </section>
-                
-            </div>
-        
-        </div>
-        
-        
-        
-        <!----------------------------------- paginas Tab moedas e cupons -------------------------------------------------------->
-        
-        <!-------------Pagina filhote magico----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs bpuppy" id="puppy">
-        
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Filhote Mágico</p>
-                        
-                    </div>
-             </header>
-            
-            <div class="mdl-layout__content">
-                
-                
-                <div class="divt1">
-                    
-                        <img class="imgpuppy" id="imgpuppy" src="images/panda1.png">
-                        
-                        <div id="container">
-                    
-                            <div class="barOuter">
-                    
-                                <div class="barInner" id="progress" aria-valuemax="1000" style="width:0%"></div>
-                                <p style="margin-left:27%;"><span id="percent">0</span>/1000</p>
-                    
-                            </div>
-                   
-                        </div>
-                    
-                        <div class="divbambo" id="teste">
-                    
-                            <div class="divbtbb" id="comida" style="position:relative;">
-                                    <img style="margin-left:10px;" src="images/bamboo.png">
-                                    <span style="margin-left:3px;"><span id="bval">5</span> /5</span>
-                            </div>
-                    
-                        </div>
-                    
-                </div>
-                
-                <div class="divt2" id="pmsg">
-                    
-                    <p style="margin-left:10px;margin-top:10px;">Obrigado por alimentar nosso filhote!!</p>
-                    <img style="margin-left:30%;" src="images/pandinha.gif">
-                    <p style="margin-left:10px;">Agora ele está feliz e vai brincar o dia todo.</p>
-                    <button class="mdl-button mdl-js-button" id="btpmsg" style="margin-left:75%;border-style:none">OK</button>
-                    
-                </div>  
-                
-                <div class="divt3" id="pmsg1">
-                    <center><img style="margin-top:20px;" src="images/pandinha2.gif"></center>
-                   <h4 style="margin-left:25px;margin-top:20px;" >PARABENS VOCÊ GANHOU!!</h4>
-                   <center><h4><span id="ngmp"></span> MOEDAS</h4></center> 
-                   <button class="mdl-button mdl-js-button" id="btpmsg1" style="margin-left:75%;border-style:none">OK</button>
-                </div>
-                
-                <div class="divt4">
-                       
-                        <div class="divpuser">
-                            <img style="margin-left:10px;margin-top:4px;" src="images/user.png">
-                            <span id="npuser"></span>
-                        </div>
-                    
-                        <div class="divnp">
-                            <img style="margin-left:10px;margin-top:4px;" height="24px;" width="24px;" src="images/icon_filhote.png">
-                            <span style="margin-left:3px;"><span id="bval1">0</span></span>
-                        </div>
-                    
-                        <div class="divph">
-                            <img src="images/help.png">
-                        </div>
-                    
-                </div>
-                
-            </div>
-                
-        </div>
-        
-        
-        <!-------------Pagina ajuda magico----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs hpuppy" id="helpuppy">
-        
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Ajuda Filhote Mágico</p>
-                        
-                    </div>
-             </header>
-            
-            <div class="mdl-layout__content">
-                
-                <div style="width:90%;margin-left:5%;margin-top:5%;">
-                    
-                <p><b>Filhote Mágico</b></p>
-                <p>1. Você só pode cuidar de um filhote por vez.</p>
-                <p>2. Quando o filhote atingir o nível máximo você será recompensado.</p>
-                <p>3. O filhote cresce de acordo com a barra de experiência.</p>
-                <p>4. Quando o filhote atingir 1000 pontos de experiência, seu filhote será adulto! E você poderá cuidar de um novo filhote.</p>
-                
-                    
-            
-                <p style="margin-top:7%;"><b>Cuidando do seu Filhote Mágico</b></p>
-                <p>1. Você tem direito a 5 bamboos diarios para alimentar seu filhote.</p>
-                <p>2. Se você não cuidar do seu filhote ele ira ficar doente.</p>
-                
-                </div>
-                
-                
-            </div>
-            
-        </div>
-        
-        
-        <!-------------Pagina de regulamento ----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs hrel" id="regulamento">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Regulamento</p>
-                        
-                    </div>
-             </header>
-            
-            <div class="mdl-layout__content">
-            
-                <div style="width:90%;margin-left:5%;margin-top:5%;">
-                
-                    <p><b>Moedas Diárias</b></p>
-                    <p>1. Você só pode pegara moeda diária apenas uma vez por mês.</p>
-                    <p>2. Volte todos os dias para ganhar mais moedas.</p>
-                    
-                    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:90%;">
-                        <tbody>
-                            <tr>
-                                <th >Dia 1</th>
-                                <th >01 moeda</th>
-                            </tr>
-                            <tr>
-                                <th>Dia 2</th>
-                                <th>05 moedas</th>
-                            </tr>
-                            <tr>
-                                <th>Dia 3</th>
-                                <th>08 moedas</th>
-                            </tr>
-                            <tr>
-                                <th>Dia 4</th>
-                                <th>10 moedsa</th>
-                            </tr>
-                            <tr>
-                                <th>Dia 5</th>
-                                <th>12 moedas</th>
-                            </tr>
-                            <tr>
-                                <th>Dia 6</th>
-                                <th>14 moedas</th>
-                            </tr>
-                            <tr>
-                                <th>Dia 7</th>
-                                <th>15 moedas</th>
-                            </tr>
-                            <tr>
-                                <th>Dia 8</th>
-                                <th>16 moedas</th>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    
-                    <p style="margin-top:20px;">3. Se você pegar por 30 dias seguidos, você ganhará 433 moedas por mês.</p>
-                    <p>4. Se você não pegar um dia, você voltará desde o começo.</p>
-                    
-                    <p style="margin-top:7%;"><b>Mundo das Moedas</b></p>
-                    <p>1. Você pode ganhar diferentes quantidades de moedas enquanto joga o mundo das moedas.</p>
-                    <p>2. Novos jogos disponiveis em um periodo de tempo.</p>
-                    <p>3. Cada jogo possui suas proprias regras.</p>
-                    
-                    <p style="margin-top:7%;"><b>Trocar moedas por cupons</b></p>
-                    <p>1. Os cupons são de diferentes valores.</p>
-                    <p>2. As lojas disponibilizam uma certa quantidade de cupons de descontos.</p>
-                    <p>3. Os cupons BICCITY só podem ser usados na loja do que o cupon pertence.</p>
-                    <p>4. Os cupons tem prazo de validade de de 7 a 30 dias.</p>
-                    <p>5. Os cupons possuem codigo que só podem ser usados na loja na hora da compra</p>
-                    
-                </div>
-                
-            </div>
-        
-        </div>
-        
-        
-        <!-------------Pagina moeda que ganhei ----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="moedawin">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Moedas que ganhei</p>
-                        
-                    </div>
-             </header>
-            
-            <div class="mdl-layout__content">
-            
-                <ul class="demo-list-item mdl-list"></ul>
-                
-                    
-            </div>
-            
-        </div>
-        
-        
-        <!-------------Pagina mundo das moedas ----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="worldcoins">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Mundo das moedas</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content"></div>
-            
-        </div>
-        
-        
-        <!-------------Pagina trocar moedas por cupon ----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="exchangecoupon">
-        
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Trocar moedas por cupon</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-                
-                
-              <!--  <div class="panel panel-info" style="height:80px;margin-top:3%;">
-                    
-                    <div class="panel-heading" style="color:black">Produtor Supermercado</div>
-                    
-                    <div class="panel-body" style="background-color:#cce7f4;">
-                           <center> <h3>R$ 10,00 OFF</h3> </center> 
-                    </div>
-                    <div class="panel-footer" style="background-color:#cce7f4;">
-                        <p> 
-                            <img height="20px;" width="20px;" src="images/oie_transparent%20(1).png"> 
-                            <span>20 moedas</span> 
-                            <span style="margin-left:40%">1000 disponiivel</span>
-                        </p>
-                       
-                    </div>
-                </div> -->
-                 
-                
-            </div>
-            
-        </div>
-        
-        
-        
-        
-        <!--------------------------------------------- paginas Tab perfil -------------------------------------------------------->
-        
-        <!-------------Pagina de mensagem ----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="pgmensagem">
-            
-                <header class="mdl-layout__header">
-
-                    <div class="mdl-layout__header-row headercolor">
-
-                        <span class="mdl-layout-title">Mensagem</span>
-
-                        <div class="mdl-layout-spacer">
-
-                        </div>
-
-                        <nav class="mdl-navigation ">
-
-                            <a class="mdl-navigation__link" href="">
-                                <img src="images/icon_delete.svg">
-                            </a>
-                            <a class="mdl-navigation__link" href="">
-                                <img src="images/icon_done.svg">
-                            </a>
-
-                        </nav>
-
-                    </div>
-
-                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                        <a href="#tabsystem" class="mdl-layout__tab is-active tabcolor">Mensagem do sistema</a>
-                        <a href="#tabvend" class="mdl-layout__tab tabcolor">Mensagem de vendedor</a>
-                    </div>
-
-                </header>
-            
-            
-            <div class="mdl-layout__content">
-                
-                <section class="mdl-layout__tab-panel is-active" id="tabsystem">
-
-                    <div class="page-content">
-                        
-                        <ul class="demo-list-three mdl-list">
-                            
-                            <div class="list-group">
-                                <a class="list-group-item" style="margin-top:10px;">
-                                <h4 class="list-group-item-heading">
-                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-2">
-                                        <input type="checkbox" id="list-checkbox-2" class="mdl-checkbox__input" /><span> BICCITY</span>
-                                    </label>
-                                </h4>
-                                <span class="mdl-list__item-text-body">
-                                        Bem Vindo ao BICCITY.
-                                </span>
-                                </a>  
-                            </div>
-                            
-                        </ul>
-                        
-                       
-                    
-                    </div>
-                    
-                </section>
-                
-                <section class="mdl-layout__tab-panel" id="tabvend">
-
-                    <div class="page-content">
-                   
-                        <ul class="demo-list-three mdl-list">
-                            
-                            <div class="list-group">
-                                    <a class="list-group-item" style="margin-top:10px;">
-                                    <h4 class="list-group-item-heading">
-                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
-                                            <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" /><span> Americanas</span>
-                                        </label>
-                                    </h4>
-                                    <span class="mdl-list__item-text-body">
-                                                Sua reserva foi enceraada hoje!!
-                                    </span>
-                                    </a>  
-                            </div>
-                            
-                        </ul>
-                        
-                    </div>
-                    
-                </section>
-            
-            </div>
-
-        
-        </div>
-        
-        
-        <!-------------Pagina carrinho de compras----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="pgcarrinho">
-            
-                <header class="mdl-layout__header">
-
-                    <div class="mdl-layout__header-row headercolor">
-
-                        <span class="mdl-layout-title">Carrinho de compras</span>
-
-                        <div class="mdl-layout-spacer">
-
-                        </div>
-
-                        <nav class="mdl-navigation ">
-
-                            <a class="mdl-navigation__link" href="">
-                                <img src="images/icon_delete.svg">
-                            </a>
-
-                        </nav>
-
-                    </div>
-
-
-                </header>
-            
-            <div class="mdl-layout__content">
-            
-            
-                <div>
-                
-                 <!--   <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" style="width:100%;margin-top:5%;">
-                    
-                        <thead>
-                            <tr>
-                                <th class="mdl-data-table__cell--non-numeric">Supermercado Produtor</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        
-                        <tbody>
-                        
-                            <tr>
-                                
-                                <td class="mdl-data-table__cell--non-numeric">
-                                   <p>Camisa social masculina</p> 
-                                   <p>Tamano M</p>    
-                                </td>
-                                <td>R$10,00</td>
-                                <td>2</td>            
-                            
-                            </tr>
-                            
-                            <tr>
-                                
-                                <td class="mdl-data-table__cell--non-numeric">
-                                   <p>Refrigerante Schin</p> 
-                                   <p>2 litros</p>    
-                                </td>
-                                <td>R$2,00</td>
-                                <td>2</td>            
-                            
-                            </tr>
-                        
-                        
-                        </tbody>
-                        
-                        
-                    </table> -->
-                    
-                    
-                
-                </div>
-            
-            </div>
-            
-            <footer class="mdl-mini-footer" style="background-color:grey;">
-                   
-                    <div class="mdl-mini-footer__left-section">
-                            <span style="color:white;">Total <span></span></span>
-                    </div>
-  
-                    <div class="mdl-mini-footer__right-section">
-                        <a class="btn" style="background-color:red;color:white;">Reservar <span> (0)</span></a>
-                    </div>
-
-            </footer>
-            
-            
-
-        
-        </div>
-        
-        
-        <!-------------Pagina meus pedidos----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="meuspedidos">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Meus pedidos</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content" >
-                
-            <!--    <div class="panel panel-primary" style="width:90%;margin-left:5%;margin-top:2%;">
-                    
-                    <div class="panel-heading">
-                        <p><img src="images/icon_delete.svg"> Horario da reserva: <span>06/09/2017 17:51</span></p>
-                        <p>Ordem ID: <span>BICCITY20170000000000000000001</span> </p>
-                    
-                    </div>
-                   
-                    
-                           
-                        <ul class="demo-list-two mdl-list">
-                            
-                            <li class="mdl-list__item mdl-list__item--two-line">
-                           
-                            <span class="mdl-list__item-primary-content">
-                                <span>Camisa social</span>
-                                <span class="mdl-list__item-sub-title">Tamanho M</span>
-                                <span class="mdl-list__item-sub-title">R$ 10,00 x 2</span>
-                            </span>
-                           
-                            </li>
-                                                     
-                            
-                        </ul>
-                        
-                        
-                   
-                    
-                    <div class="panel-footer">
-                      <p>Quantidade: <span style="margin-left:60%">2</span> </p> 
-                      <p>Valor: <span style="margin-left:60%;color:red;">R$ 20,00</span> </p>      
-                    </div>
-                
-                </div> -->
-                
-                    
-            
-            </div>
-        
-        </div>
-        
-        
-        <!-------------Pagina meus cupons----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="meuscupons">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Meus cupons</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-            
-                <div>
-                
-                <!-- <div class="panel panel-default" style="margin-top:5%;">
-                         
-                        <div class="panel-body" style="background-color:red;">
-                            <center style="color:white;"><h2>R$ 10,00 OFF</h2></center>
-                            <center style="color:white;">Seu pedido acima de R$ 50,00 ou mais</center>
-                        </div>
-                        <div class="panel-footer"  style="background-color:white;">
-                            <p>Pode ser usado em: <span>Supermercado Produtor</span> </p>
-                            <p>Valido até: <span>15/10/2017  22:00</span> </p>
-                            <p>Codigo: <span>CBC201701</span></p>
-                            <p>Status: <span>Válido</span> </p>
-                        </div>
-                        
-                    </div> -->
-                    
-                <!--    <div class="panel panel-default" style="margin-top:5%;">
-                         
-                        <div class="panel-body" style="background-color:grey;">
-                            <center style="color:white;"><h2>R$ 10,00 OFF</h2></center>
-                            <center style="color:white;">Seu pedido acima de R$ 50,00 ou mais</center>
-                        </div>
-                        <div class="panel-footer"  style="background-color:white;">
-                            <p>Pode ser usado em: <span>Supermercado Produtor</span> </p>
-                            <p>Valido até: <span>15/10/2017  22:00</span> </p>
-                            <p>Codigo: <span>CBC201702</span></p>
-                            <p>Status: <span>Vencido</span> </p>
-                        </div>
-                        
-                    </div> -->
-                    
-                
-                
-                </div>
-                
-            </div>
-            
-        </div>
-        
-        
-        <!-------------Pagina de configurações----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="configuracoes">
-        
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Configurações</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-            
-                <ul class="demo-list-item mdl-list">
-                
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Configuração da conta</span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Idioma</span>
-                        <span class="mdl-list__item-secondary-action" style="color:grey;" id="idioma"></span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Politica de privacidade</span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Politica de uso</span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Relatar problema</span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Avaliar BICCITY no Google Play</span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">Versão <span style="margin-left:70%">1.0.0</span></span>
-                    </li>
-                
-                </ul>
-                
-                <div class="divt10">
-                    
-                    <div class="panel" style="background-color:#E6E8FA;">
-                            
-                        <div class="panel-heading" >Idioma</div>
-                        
-                           
-                            <div class="mdl-textfield mdl-js-textfield">
-                               
-                               <ul class="demo-list-item mdl-list">
-                                    
-                                   <li class="mdl-list__item">
-                                       <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="idioma1">
-                                            <input type="radio" id="idioma1" class="mdl-radio__button" name="options" value="1" />
-                                        </label>
-                                    
-                                        <span class="mdl-list__item-primary-content">Portugues</span>
-                                   </li>
-                                   <li class="mdl-list__item">
-                                       <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="idioma2">
-                                            <input type="radio" id="idioma2" class="mdl-radio__button" name="options" value="1" />
-                                        </label>
-                                    
-                                        <span class="mdl-list__item-primary-content">Ingles</span>
-                                   </li>
-                                   <li class="mdl-list__item">
-                                       <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="idioma3">
-                                            <input type="radio" id="idioma3" class="mdl-radio__button" name="options" value="1" />
-                                        </label>
-                                    
-                                        <span class="mdl-list__item-primary-content">Espanhol</span>
-                                   </li>
-                                    
-                               </ul>
-                               
-                           </div>
-                
-                </div>
-            
-            </div>
-                
-                <div class="divt11">
-                    
-                    <div class="panel" style="background-color:#E6E8FA;">
-                            
-                        <div class="panel-heading" >Relatar problema</div>
-                        
-                           
-                            <div class="mdl-textfield mdl-js-textfield">
-                                
-                                <ul class="demo-list-item mdl-list">
-                                    <li class="mdl-list__item">
-                                        <span class="mdl-list__item-primary-content">Denunciar problema com loja</span>
-                                    </li>
-                                    <li class="mdl-list__item">
-                                        <span class="mdl-list__item-primary-content">Enviar comentários</span>
-                                    </li>
-                                    <li class="mdl-list__item">
-                                        <span class="mdl-list__item-primary-content">Relatar problema</span>
-                                    </li>
-                                </ul>
-                               
-                              
-                           </div>
-                
-                    </div>
-                
-                </div>
-                
-            
-            </div>
-        
-        
-        </div>
-        
-        
-        
-      
-        <!-------------Pagina de configurações da conta----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="configconta">
-            
-                <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Configurações da conta</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-                
-                
-                <div class="demo-list-action mdl-list">
-                    
-                    <div class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <span>Nome de usuario</span>
-                        </span>
-                        <span class="mdl-list__item-secondary-action" style="color:grey;" id="nmedit"></span>
-                    </div>
-                    <div class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <span>E-mail</span>
-                        </span>
-                        <span class="mdl-list__item-secondary-action" style="color:grey;" id="mailfinal"></span>
-                    </div>
-                    <div class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <span>Gênero</span>
-                        </span>
-                        <span class="mdl-list__item-secondary-action" style="color:grey;" id="gender"></span>
-                    </div>
-                    <div class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <span>Alterar senha</span>
-                        </span>
-                    </div>
-                    <div class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <span>Excluir conta</span>
-                        </span>
-                    </div>
-                
-                </div>
-                
-                
-                <div class="divt6">
-                    
-                    <div class="panel" style="background-color:#E6E8FA;">
-                            <div class="panel-heading" >Nome de usuário</div>
-                        <div class="panel-body">
-                           <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="sample1">
-                                <label class="mdl-textfield__label" for="sample1">paulosantoshc22</label>
-                           </div>        
-                        </div>
-                        <div class="panel-footer" style="background-color:#E6E8FA;">
-                             <button class="mdl-button mdl-js-button mdl-button--accent" style="margin-left:25%;">Cancelar</button>
-                             <button class="mdl-button mdl-js-button mdl-button--accent">Salvar</button>
-                        </div>
-                    </div>
-                
-                </div>
-                
-                <div class="divt7">
-                
-                    <div class="panel" style="background-color:#E6E8FA;">
-                            <div class="panel-heading" >Gênero</div>
-                        
-                           
-                            <div class="mdl-textfield mdl-js-textfield">
-                               
-                               <ul class="demo-list-item mdl-list">
-                                    
-                                   <li class="mdl-list__item">
-                                       <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="gender1">
-                                            <input type="radio" id="gender1" class="mdl-radio__button" name="options" value="1" />
-                                        </label>
-                                    
-                                        <span class="mdl-list__item-primary-content">HOMEM</span>
-                                   </li>
-                                   <li class="mdl-list__item">
-                                       <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="gender2">
-                                            <input type="radio" id="gender2" class="mdl-radio__button" name="options" value="1" />
-                                        </label>
-                                    
-                                        <span class="mdl-list__item-primary-content">MULHER</span>
-                                   </li>
-                                    
-                               </ul>
-                               
-                           </div>
-                            
-                        
-                    </div>
-                
-                </div>
-                
-                <div class="divt8">
-                    
-                    <div class="panel" style="background-color:#E6E8FA;">
-                            <div class="panel-heading" >Alterar senha</div>
-                        <div class="panel-body">
-                           <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="oldpass">
-                                <label class="mdl-textfield__label" for="oldpass">Senha antiga</label>
-                           </div>
-                         <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="newpass">
-                                <label class="mdl-textfield__label" for="newpass">Nova senha</label>
-                           </div>
-                             <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="newpass1">
-                                <label class="mdl-textfield__label" for="newpass1">Confirme a senha</label>
-                           </div>
-                        </div>
-                        <div class="panel-footer" style="background-color:#E6E8FA;">
-                             <button class="mdl-button mdl-js-button mdl-button--accent" style="margin-left:25%;">Cancelar</button>
-                             <button class="mdl-button mdl-js-button mdl-button--accent">Salvar</button>
-                        </div>
-                    </div>
-                
-                </div>
-                
-                <div class="divt9">
-                
-                    <div class="panel" style="background-color:#E6E8FA;">
-                            <div class="panel-heading" >Excluir conta</div>
-                        <div class="panel-body">
-                           <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="excmail">
-                                <label class="mdl-textfield__label" for="excmail">email</label>
-                           </div>
-                            <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" id="excsenha">
-                                <label class="mdl-textfield__label" for="excsenha">senha</label>
-                           </div>
-                            
-                        </div>
-                        <div class="panel-footer" style="background-color:#E6E8FA;">
-                             <button class="mdl-button mdl-js-button mdl-button--accent" style="margin-left:25%;">Cancelar</button>
-                             <button class="mdl-button mdl-js-button mdl-button--accent">Excluir</button>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            
-            </div>
-            
-        </div>
-        
-        
-        
-        
-        <!-------------Pagina politica de privacidade----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="polprivacidade">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Politica de privacidade</p>
-                        
-                    </div>
-                
-             </header>
-            
-        
-        </div>
-        
-        
-        <!-------------Pagina politica de uso----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="poluso">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Politica de uso</p>
-                        
-                    </div>
-                
-             </header>
-            
-        </div>
-        
-        
-        <!-------------Pagina Denunciar problema com loja----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="denuncia">
-                   
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            
-                <header class="mdl-layout__header">
+                <div class="upage vertical-col left hidden  mdl-layout mdl-js-layout" id="cadlog">
                   
-                    <div class="mdl-layout__header-row">
-
-                        <span class="mdl-layout-title" style="margin-left:-50px;">
-                            <img src="images/ic_arrow_back_white_24px.svg">  
-                            <span style="margin-left:10px;">Denuncia</span>
-                        </span>
-      
-                    <div class="mdl-layout-spacer"></div>
-                            <nav class="mdl-navigation">
-                            <a class="mdl-navigation__link"><img src="images/icon_done.svg"></a>
-                    </nav>
-                    
-                    </div>
-                    
-                </header>
-                
-                
-            </div>
-            
-            <div class="mdl-layout__content">
-           
-               
-                <div class="divt12">
-                
-                
-                <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="sample1">
-                        <label class="mdl-textfield__label" for="sample1">Nome da loja</label>
-                </div>
-                    
-                <div class="mdl-textfield mdl-js-textfield">
-                            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" style="height:150px;" ></textarea>
-                            <label class="mdl-textfield__label" for="sample5">Relate o que aconteceu</label>
-                </div>
-                    
-                <div style="width:90%;color:grey;">
-                    <p>Nos conte em pocas palavras o seu problema com a loja. Nossa central averigua sua denuncia de acordo com as nossas diretrizes da comunidade, como abuso, não comprimento de preços, etc. Todas as denuncias feitas estão sujeitas as nossas POLITICAS DE USO.</p>
-                    </div>
-                
-                </div>
-                        
-                
-                
-            
-            </div>
-            
-        </div>
-        
-        
-        <!-------------Pagina de Enviar comentários----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="enviarcoment">
-                
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            
-                <header class="mdl-layout__header">
-                  
-                    <div class="mdl-layout__header-row">
-
-                        <span class="mdl-layout-title" style="margin-left:-50px;">
-                            <img src="images/ic_arrow_back_white_24px.svg">  
-                            <span style="margin-left:10px;">Enviar comentario</span>
-                        </span>
-      
-                    <div class="mdl-layout-spacer"></div>
-                            <nav class="mdl-navigation">
-                            <a class="mdl-navigation__link"><img src="images/icon_done.svg"></a>
-                    </nav>
-                    
-                    </div>
-                    
-                </header>
-                
-                
-            </div>
-            
-            <div class="mdl-layout__content">
-              
-                <div class="divt13">
-                        <div class="mdl-textfield mdl-js-textfield">
-                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="coment1" style="height:150px;" ></textarea>
-                        <label class="mdl-textfield__label" for="coment1">Como podemos melhorar?</label>
-                        </div>
-                    
-                    <div style="width:90%;color:grey;">
-                    <p>Apenas nos envie dicas e conselhos de como melhorar o aplicativo. Para relatar problemas no aplicativo vá ate "RELATAR PROBLEMA", e para denunciar abusos ou problemas com loja vá até "DENUNCIAR PROBLEMA COM LOJA".</p>
-                
-                    </div>
-                    
-                </div>
-                
-                
-            
-            </div>
-        
-        </div>
-        
-        
-        <!-------------Pagina de Relatar problema----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="relatarproblem">
-            
-               <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            
-                <header class="mdl-layout__header">
-                  
-                    <div class="mdl-layout__header-row">
-
-                        <span class="mdl-layout-title" style="margin-left:-50px;">
-                            <img src="images/ic_arrow_back_white_24px.svg">  
-                            <span style="margin-left:10px;">Relatar problema</span>
-                        </span>
-      
-                    <div class="mdl-layout-spacer"></div>
-                            <nav class="mdl-navigation">
-                            <a class="mdl-navigation__link"><img src="images/icon_done.svg"></a>
-                    </nav>
-                    
-                    </div>
-                    
-                </header>
-                
-                
-            </div>
-        
-                <div class="mdl-layout__content">
-            
-                    <div class="divt13">
-                        <div class="mdl-textfield mdl-js-textfield">
-                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="coment2" style="height:150px;" ></textarea>
-                        <label class="mdl-textfield__label" for="coment2">Relate o problema com o aplicativo</label>
-                        </div>
-                    
-                    <div style="width:90%;color:grey;">
-                    <p>Apenas nos envie os problemas que você deve com a aplicação. Para dar dicas de como melhorarmos vá ate "ENVIAR COMENTÁRIOS", e para denunciar abusos ou problemas com loja vá até "DENUNCIAR PROBLEMA COM LOJA".</p>
-                
-                    </div>
-                    
-                </div>
-                    
-                </div>
-            
-        </div>
-        
-        
-        
-        
-        <!-------------Pagina de ajuda----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="ajuda">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Ajuda</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-            
-            </div>
-        
-        </div>
-        
-        
-        <!-------------Pagina de info----------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs fundoinfo" id="info">
-            
-            
-            <div class="mdl-layout__content">
-                
-                <div style="margin-top:55%;">
-                    <center> <img src="images/logo2.png"> </center> 
-                    <center><h6 style="color:white;">Versão 1.0.0</h6></center>
-                    <p style="font-size:12px;margin-left:10px;color:white;">&#169; 2017 Startup Genesis Technology. 
-                        Todos os direitos reservados</p>
-                </div>
-            
-            </div>
-        
-        </div>
-        
-        
-        <!---------------Pagina resultado cinema----------------------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="resultcine"> 
-        
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">CINEMA</p>
-                        
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-                
-                
-               <ul class="demo-list-two mdl-list">
-                    
-                    
-                   <li class="mdl-list__item mdl-list__item--two-line list-group-item-info" style="height:130px;width:90%;margin-left:5%;margin-top:2%; color:black">
-                                <span class="mdl-list__item-primary-content" style="height:100px;">
-                                    <input type="checkbox">
-                                    <span>Cine Cruzeiro</span>
-                                    <p class="list-group-item-text">Seção 1</p>
-                                    <p class="list-group-item-text">Seção 2</p>
-                                    <p class="list-group-item-text">Seção 3</p>
-                                    <p class="list-group-item-text">Endereço:</p>
-                                    <p class="list-group-item-text">Telefone:</p>
-                                </span>
-                                <span class="mdl-list__item-secondary-content"> 
-                                    <a class="mdl-list__item-secondary-action" style="color:black">R$ 12,00</a>
-                                </span>
-                    </li>
+                    <main class="mdl-layout__content">
                       
-                </ul>
-                 
-                <div class="divaddcar">
-                    
-                    <div class="panel panel-default">
-  
-                            <div class="panel-heading">Adicionar ao carrinho</div>
-  
-                            <div class="panel-body">
-                                <span>Cine Cruzeiro</span>
+                       <div class="demo-card-wide mdl-card mdl-shadow--2dp card">
                                 
-                                <ul class="demo-list-two mdl-list">
-                       
-                                <li class="mdl-list__item mdl-list__item--two-line" style="height:150px;">
-                                    <span class="mdl-list__item-primary-content" style="height:120px;">
-                                        <input type="checkbox">
-                                            <span>La la land cantando as estações (Legen.)</span>
-                                            <span class="mdl-list__item-sub-title">15:00hrs</span>
-                                            <span class="mdl-list__item-sub-title">R$12,00</span>
-                                    </span>
-    
-                                    <span class="mdl-list__item-secondary-content" style="height:110px;">
-                                    <span class="mdl-list__item-secondary-info">
-           
-                                    <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;">
-                                    
-                                   <select class="mdl-selectfield__select" id="professsion2" name="professsion">
-                                    <option value="option1">1</option>
-                                    <option value="option2">2</option>
-                                    <option value="option3">3</option>
-                                    </select>
-                                        
-                                        <label class="mdl-selectfield__label" for="professsion2">Qtd ingresso</label>
-                                        
-                                    </div>
-        
-                                    </span>
-      
-                                    </span>
-                                    
-                                </li>
-                                         
-                                </ul>
-      
-      
-                            </div>
-                        
-                            <div class="panel-footer">
-                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Adicionar</button>
-                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Cancelar</button>
-                            </div>
-                        
-                        </div>
-               
-                    
-               
-                </div> 
-                
-                <div class="divreserva">
-                    
-                       <div class="panel panel-default">
+                           <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Login</h2>
+                                </div>
   
-                            <div class="panel-heading">Reservar</div>
-  
-                            <div class="panel-body">
-                                <span>Cine Cruzeiro</span>
-                                
-                                <ul class="demo-list-two mdl-list">
-                       
-                                <li class="mdl-list__item mdl-list__item--two-line" style="height:150px;">
-                                    <span class="mdl-list__item-primary-content" style="height:120px;">
-                                        <input type="checkbox">
-                                            <span>La la land cantando as estações (Legen.)</span>
-                                            <span class="mdl-list__item-sub-title">15:00hrs</span>
-                                            <span class="mdl-list__item-sub-title">R$12,00</span>
-                                    </span>
-    
-                                    <span class="mdl-list__item-secondary-content" style="height:110px;">
-                                    <span class="mdl-list__item-secondary-info">
-           
-                                    <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" style="width:100px;">
+                                <div class="mdl-card__supporting-text">
                                     
-                                   <select class="mdl-selectfield__select" id="professsion2" name="professsion">
-                                    <option value="option1">1</option>
-                                    <option value="option2">2</option>
-                                    <option value="option3">3</option>
-                                    </select>
-                                        
-                                        <label class="mdl-selectfield__label" for="professsion2">Qtd ingresso</label>
-                                        
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="user1">
+                                        <label class="mdl-textfield__label" for="user1">Nome de usuario</label>
                                     </div>
-        
-                                    </span>
-      
-                                    </span>
                                     
-                                </li>
-                                         
-                                </ul>
-      
-      
-                            </div>
-                        
-                            <div class="panel-footer">
-                             <p>Total <span>R$36,00</span></p>
-                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Reservar</button>
-                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Cancelar</button>
-                            </div>
-                        
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="password" id="senha">
+                                        <label class="mdl-textfield__label" for="senha">Senha</label>
+                                    </div>
+                                    
+                                    <p class="textcolor1">Esqueceu a senha?</p>
+                                    <p class="textcolor1">Não é membro? Registre-se</p>
+                                    
+                                    
+                                </div>
+                           
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Entrar</button>
+                                </div>
+                           
                         </div>
-                        
-                    
-                
-                </div>
-                
-                <div class="divavaliar">
-                    
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Avaliar</div>
-                        <div class="panel-body">
-                            <p>Cine Cruzeiro</p>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                        </div>
-                        <div class="panel-footer">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Confirmar</button>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Cancelar</button>
-                        
-                        </div>
-                    </div>
-                
-                </div>
-                
-            
-            </div>
-            
-            <footer class="mdl-mini-footer" style="background-color:white;">
-                    <div class="mdl-mini-footer__left-section">
-                        <ul class="mdl-mini-footer__link-list">
-                            <li><a href="#"><img src="images/ic_location_on_black_24px.svg"> </a></li>
-                            <li><a class="mdl-button--primary" href="#">Adicionar ao carrinho</a></li>
-                            <li><a class="mdl-button--primary" href="#">Reservar</a></li>
-                            <li><a class="mdl-button--primary" href="#">Avaliar</a></li>
-                        </ul>
-                    </div>
-            </footer>
-            
-            
-        </div>
-        
-        
-        <!---------------Pagina tipos de medicamentos----------------------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="opcfarm">
-            
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Tipos de medicamentos</p>
-                        
-                    </div>
-                
-             </header>
-            
-            
-            <div class="mdl-layout__content">
-               
-                <ul class="demo-list-item mdl-list">
                    
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                todos de a-z
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                genericos de a-z
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                alergias e infecções
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                anticoncepcionais
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                anti-inflamatórios
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                anti-tabagismo
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                asma
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                calmantes
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                congestão nasal
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                diabetes
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                dor e febre
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                dor de garganta
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                emagrecedores
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                gripe e resfriado
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                gastrite
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                hipertensão
-                        </span>
-                    </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                                tosse
-                        </span>
-                    </li>
+                       <div class="div1" id="divcadastro">
+                        
+                           <div class="demo-card-wide mdl-card mdl-shadow--2dp card">
+                                
+                           <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Cadastro</h2>
+                                </div>
   
-                </ul>
-                
-            </div>
-            
-        </div>
-        
-        <!---------------Pagina tipos de quarto----------------------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="opchotel">
-        
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Tipos de quarto</p>
+                                <div class="mdl-card__supporting-text">
+                                    
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="email1">
+                                        <label class="mdl-textfield__label" for="email1">E-mail</label>
+                                    </div>
+                                    
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="user2">
+                                        <label class="mdl-textfield__label" for="user2">Nome de usuario</label>
+                                    </div>
+                                    
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="password" id="senha2">
+                                        <label class="mdl-textfield__label" for="senha2">Senha</label>
+                                    </div>
+                                    
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="password" id="senha3">
+                                        <label class="mdl-textfield__label" for="senha3">Confirmar senha</label>
+                                    </div>
+                                    
+                                    <p>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="termos">
+                                            <input type="checkbox" id="termos" class="mdl-checkbox__input"/>
+                                            Concordo com os<span class="textcolor1"> termos de uso</span>  
+                                        </label>
+                                    </p>
+                                    
+                                    
+                                </div>
+                           
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Cadastrar</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Cancelar</button>
+                                </div>
+                           
+                        </div>
                         
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-            
-                <ul class="demo-list-item mdl-list">
-                    
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                    Quarto individual
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                    Quarto duplo
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                    Quarto familia
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                    Quarto multiplos
-                            </span>
-                        </li>
-                    
-                </ul>
-                
-            
-            </div>
-            
-        
-        </div>
-        
-        <!---------------Pagina categoria de lojas----------------------------------------->
-        <div class="upage hidden mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="opcljdepar">
-                
-            <header class="mdl-layout__header">
-                    <div class="navbar-header" style="background-color:#1665c0;">
-                        <a class="navbar-brand" href="#">
-                            <img src="images/ic_arrow_back_white_24px.svg">
-                        </a>
-                        <p class="navbar-text" style="color:white;font-size:22px">Departamentos</p>
+                       </div>
                         
-                    </div>
-                
-             </header>
-            
-            <div class="mdl-layout__content">
-            
-                <ul class="demo-list-item mdl-list">
+                       <div class="div2" id="divrecuperaracesso">
+                        
+                           <div class="demo-card-wide mdl-card mdl-shadow--2dp card2">
+                                
+                           <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Recuperar acesso</h2>
+                                </div>
+  
+                                <div class="mdl-card__supporting-text">
+                                    
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="reuser">
+                                        <label class="mdl-textfield__label" for="reuser">Email ou nome de usuario</label>
+                                    </div>
+                                    
+                                </div>
+                           
+                                <div class="mdl-card__actions">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Enviar</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Cancelar</button>
+                                </div>
+                           
+                        </div>
+                   
+                      
+                       </div>
+                        
+                       <div class="div3" id="divsucesso">
+                           
+                           <div class="panel panel-default">
+                                
+                               <div class="panel-body">
+                                    
+                                    <center>
+                                    <span class="glyphicon glyphicon-ok-circle tamicon" aria-hidden="true"></span>
+                                    </center>
+                                   
+                                    <center style="margin-top:4%;"><p></p></center>
+    
+                                </div>
+                               
+                               <div class="panel-footer" style="background-color:white;border-top: none;">
+                                    <button class="mdl-button mdl-js-button posbutton" style="margin-left:80%;">OK</button>
+                               </div>
+                               
+                          </div>
+                        
+                       </div>
+                        
+                       <div class="div4" id="diverro">
+                           
+                           <div class="panel panel-default">
+                                
+                               <div class="panel-body">
+                                    
+                                    <center>
+                                    <span class="glyphicon glyphicon-remove-circle tamicon2" aria-hidden="true"></span>
+                                    </center>
+                                   
+                                    <center style="margin-top:4%;"><p></p></center>
+                                    <center style="margin-top:4%;"><p></p></center>
+                                    <center style="margin-top:4%;"><p></p></center>
+    
+                                </div>
+                               
+                               <div class="panel-footer" style="background-color:white;border-top: none;">
+                                    <button class="mdl-button mdl-js-button posbutton" style="margin-left:80%;">OK</button>
+                               </div>
+                               
+                          </div>
+                        
+                       </div>
+                      
+                                            
+                    </main>
                     
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                moda feminina
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                moda masculina
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                mamãe e bebê
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                bolsas e sapatos
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                esporte e lazer
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                jóias e relógios
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                telefones e acessórios
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                eletrônicos
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                casa e jardim
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                computadores e redes
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                beleza e saude
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                automóveis e motocicletas
-                            </span>
-                        </li>
-                        <li class="mdl-list__item">
-                            <span class="mdl-list__item-primary-content">
-                                ferramentas e equipamentos
-                            </span>
-                        </li>
+                </div>
+                
+                <div class="upage vertical-col left hidden mdl-layout mdl-js-layout mdl-layout--fixed-header" id="user">
+                    
+                    <header class="mdl-layout__header">
+    
+                            <div class="mdl-layout__header-row">
+      
+                                <span class="mdl-layout-title">BICCITY</span>
+                                
+                                <div class="mdl-layout-spacer"></div>
 
-                </ul>
+                                <nav class="mdl-navigation">
+                                    
+                                    <a class="mdl-navigation__link" href=""><div class="material-icons">shopping_cart</div><span class="badge1" data-badge=""></span></a>
+                                    
+                                    <a class="mdl-navigation__link" href=""><div class="material-icons" >notifications</div><span class="badge1" data-badge=""></span></a>
+                                    
+                                    
+                                    
+                                </nav>
+                                
+                            </div>
+                        
+                    </header>
+                    
+                    <div class="mdl-layout__drawer">
+                       
+                        <span class="mdl-layout-title drwr">
+                         Olá,
+                        <p>paulosantos</p>
+                        </span>
+                        
+                        <div class="demo-list-action mdl-list">
+                            
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">home</i>
+                                <span>Inicio</span>
+                            </span>
+                         </div>
+                          
+                        <div class="mdl-list__item">
+                            
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">account_circle</i>
+                                <span>Minha conta</span>
+                            </span>
+                            
+                         </div>
+                            
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">assignment</i>
+                                <span>Meus pedidos</span>
+                            </span>
+                         </div>
+                            
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">shopping_cart</i>
+                                <span>Carrinho de compras</span>
+                            </span>
+                            <a class="mdl-list__item-secondary-action" href="#"><span class="badge" style="color:white;background-color:#D9D919;"></span></a>
+                         </div>
+                          
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">account_balance_wallet</i>
+                                <span>Minha carteira</span>
+                            </span>
+                         </div>
+                            
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">message</i>
+                                <span>Mensagens</span>
+                            </span>
+                            <a class="mdl-list__item-secondary-action" href="#"><span class="badge" style="color:white;background-color:#D9D919;"></span></a>
+                         </div>
+                            
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">settings</i>
+                                <span>Configurações</span>
+                            </span>
+                         </div>
+                            
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">grade</i>
+                                <span>Sugestões</span>
+                            </span>
+                         </div>
+                            
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content" >
+                                <i class="material-icons mdl-list__item-avatar" style="background-color:white;color:black;font-size:36px;">help_outline</i>
+                                <span>Ajuda</span>
+                            </span>
+                         </div>
+                          
+                        </div>
+                        
+                    </div>
+                    
+ 
+                    
+                    <main class="mdl-layout__content">
+                        <div class="page-content"></div>
+                    </main>
                 
+                </div>
             
-            </div>
             
-        </div>
-        
-    </body>
+        </body>
+
 </html>

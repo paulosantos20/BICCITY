@@ -43,536 +43,135 @@ body {
     color: black ;
 }
 
-.textcolor{
-    color: white;
+
+/* css textcolor1 pertence a cor do termos de uso   */
+
+.textcolor1{
+    color: cornflowerblue;
 }
+
+
+/* css demo-layout-transparent pertence ao fundo da tela mainpage */
 
 .demo-layout-transparent {
-  background: url('../images/1969625.jpg'); 
+  background-image: url('../images/BICCITY(1).png');
   background-repeat: no-repeat;
-    background-size: cover;
-}
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
-  color: white; 
+  background-position: center;
 }
 
-.mage{
-    width: 40%;
-    height:15%;
-    margin-top: 5%; 
-    margin-left: 33%;
-}
 
-.top{
-    margin-top:70%;
-    margin-left:40%;
-    width:20%;
-    height:20%;
-}
-
-.tp1{
-    color:white;
-    margin-left:27%;
-    margin-top:5%;
-}
-
-.headercolor,.tabcolor{
-    background-color:#1665c0;
-    color: white;
-}
+/* css card pertence ao card de login e cadastro   */
 
 .card{
-    margin-top:30%;
-    margin-left:5%;
-    width:50%;
-}
-
-.card1{
-    margin-top:35%;
-    margin-left:5%;
-    width:50%;
-}
-
-.demo-card-wide.card2{
-    margin-top:0%;
-    margin-left:0%;
-    width:100%;
-}
-
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height:150px;
-  background:url('../images/space.png');
-}
-
-
-.demo-list-item{
-    width:100%;
-}
-
-
-.card3{
-    margin-top:10%;
-    margin-left:5%;
-    width:90%;
-}
-
-
-.divprin{
-    background: url('../images/degrade.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 170px;
-}
-
-.d1{
-    width: 34%;
-    height: 150px;
-    background-color: transparent;
-    float: left;
-    
-}
-
-.d2{
-    width: 33%;
-    height: 150px;
-    background-color: transparent;
-    float: left;
-}
-
-.d3{
-    width: 33%;
-    height: 150px;
-    background-color: transparent;
-    float: left;
-}
-
-.divmc{
-    width: 90%;
-    height: 120px;
-    margin-left: 5%;
-    margin-top: 10%;
-    background-color: white;
-}
-
-.dmc1{
-    width: 33%;
-    height: 100px;
-    background-color: none;
-    float: left;
-}
-
-.dmc2{
-    width: 33%;
-    height: 100px;
-    background-color: none;
-    float: left;
-}
-
-.dmc3{
-    width: 33%;
-    height: 100px;
-    background-color: none;
-    float: left;
-}
-
-.imgcupon{
-    margin-left: 10%;
-    margin-top: 5%;
-}
-
-.imgfilhote{
-    margin-left: 10%;
-    margin-top: 10%;
-}
-
-.imgwm{
-    margin-left: 10%;
-    margin-top: 5%;
-}
-
-.moeda{
-    margin-top: 15%;
-    margin-left: 10%;
-    width: 80%;
-    height: 70%;
-}
-
-.numd{
+    margin-left: 6%;
     margin-top: 20%;
-    margin-left: 5%;
-    font-size: 18px;
-    
+    width: 80%; 
 }
 
-
+/* css div1 pertence a tela de cadastro   */
 
 .div1{
-   margin-top:5%;
-   margin-left:5%;
-   width:90%;
-   height:50px;
-}
-
-
-.demo-list-two {
-  width: 100%;
-  margin-top:5%;
-}
-
-.li_listen{
-    width:90%;
-    margin-left:5%;
-    margin-top:5%;
-    
-}
-
-.demo-list-radio {
-  display: inline;
-}
-
-.bpuppy{
-     background: url('../images/fundo_filhote.png'); 
-  background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.imgpuppy{
-    margin-left:40%;
-    margin-top: 80%;
-    position: relative;
-    
-}
-
-.barOuter {
-    background: green;
-    border: 1px solid #000;
-    border-radius: 8px;
-    box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 0 rgba(255, 255, 255, 0.12);
-    height: 16px;
-    width: 35%;
-    margin-left: 38%;
-    margin-top: 2%;
-    position: relative;
-}
- 
-.barLabel {
-    color: white;
-    font-size: 12px;
-    position: absolute;
-    right: -32px;
-    top: 0;
-}
- 
-.barInner {
-    background-color: #A444B1;
-    border-right: 1px solid #090909;
-    border-radius: 7px;
-    height: 100%;
-    width: 50%;
-    background-size: 100% 100%, 20px 20px, 100% 100%;
-    background-image:
-        linear-gradient(to bottom,
-                        rgba(255, 255, 255, 0.33) 0,
-                        rgba(255, 255, 255, 0.08) 50%,
-                        rgba(0, 0, 0, 0.25) 50%,
-                        rgba(0, 0, 0, 0.1) 100%),
-        linear-gradient(45deg,
-                        rgba(255, 255, 255, 0.16) 25%,
-                        rgba(0, 0, 0, 0) 25%,
-                        rgba(0, 0, 0, 0) 50%,
-                        rgba(255, 255, 255, 0.16) 50%,
-                        rgba(255, 255, 255, 0.16) 75%,
-                        rgba(0, 0, 0, 0) 75%,
-                        rgba(0, 0, 0, 0)),
-        linear-gradient(to right, #09c, #f44);
-    box-shadow: inset 0 1px 1px 0px rgba(255, 215, 215, 0.5),
-                inset 0 -1px 1px 0px rgba(255, 255, 255, 0.25),
-                1px 1px 3px 0 rgba(0,0,0,0.33);
-}
-/*.barInner {
-    background-color: #A444B1;
-    border-right: 1px solid #090909;
-    border-radius: 7px;
-    height: 100%;
-    width: 50%;
-    background-size: 100% 100%, 20px 20px, 100% 100%;
-    background-image:
-        linear-gradient(-45deg,transparent 33%, rgba(0, 0, 0, .1) 33%,rgba(0,0, 0, .1) 66%, transparent 66%),
-        linear-gradient(to top,rgba(255, 255, 255, .25),rgba(0, 0, 0, .25)),
-        linear-gradient(to left, #09c, #f44);
-
- linear-gradient(to right, #5A377F, #A444B1);
-
-border-radius: 2px;
-background-size: 35px 20px, 100% 100%, 100% 100%;
-} */
-
-.divbambo{
-    width: 100%;
-    height: 30px;
-    margin-top: 10%;
-    background-color: none;
-    position: relative;
-   
-}
-
-.divbtbb{
-    background-color: white;
-    border-radius: 90px;
-    width: 80px;
-    height: 25px;
-    margin-top: 2%;
-    margin-left: 75%;
-    position: relative;
-    
-}
-
-.divmsgg{
-    background-color: blue;
-    height: 100px;
-    width: 100px;
-    z-index: 1;
-    margin-left: 40%;
-    position: absolute;
-    
-}
-
-.divt1{
-    position:absolute; 
-    left:1px; 
-    top:0px;
+   position: absolute;
+    left:0%; 
+    top:0%;
     height:100%;
     width:100%;
     z-index:1;
-    background-color:none;
-}
-
-
-.divt2{
-    position:absolute; 
-    left:1px; 
-    top:1px;
-    height:40%;
-    width:80%;
-    z-index:2;
-    background-color:gainsboro;
-    margin-top: 45%;
-    margin-left: 10%;
-    display: none; 
-}
-
-.divt3{
-    position:absolute; 
-    left:1px; 
-    top:1px;
-    height:40%;
-    width:80%;
-    z-index:2;
-    background-color:gainsboro;
-    margin-top: 45%;
-    margin-left: 10%;
+    background-color: gray;
+    opacity: 1;
     display: none;
 }
 
-.divt4{
-    position:absolute; 
-    left:1px; 
-    top:10px;
-    height:10%;
+/* css div2 e card2 pertence a tela de recuperar senha  */
+
+.card2{
+    margin-left: 6%;
+    margin-top: 40%;
+    width: 80%; 
+}
+
+.div2{
+   position: absolute;
+    left:0%; 
+    top:0%;
+    height:100%;
     width:100%;
     z-index:1;
-    background-color: none;
-}
-
-.divpuser{
-    background-color: white;
-    border-radius: 90px;
-    width: 45%;
-    height: 30px;
-    margin-top: 2%;
-    margin-left: 2%;
-    float: left;
-}
-
-
-
-.divnp{
-    background-color: white;
-    border-radius: 90px;
-    width: 18%; 
-    height: 30px;
-    margin-left: 20px;
-    margin-top: 2%;
-    float: left;
-}
-
-.divph{
-    background-color: none;
-    margin-left: 60px;
-    margin-top: 2%;
-    float: left;
-}
-
-.hpuppy{
-    background: url('../images/fundo2.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hrel{
-    background: url('../images/fundo2.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-
-.divt6{
-    position:absolute; 
-    left:10%; 
-    top:20%;
-    height:10%;
-    width:80%;
-    z-index:1;
-    background-color: none;
+    background-color: gray;
+    opacity: 1;
     display: none;
 }
 
-.divt7{
-    position:absolute; 
-    left:10%; 
-    top:20%;
-    height:5%;
-    width:80%;
-    z-index:1;
-    background-color: none;
-    display: none;
-   
-}
+/* css div3 pertence a tela de mensagem de sucesso   */
 
-.divt8{
-    position:absolute; 
-    left:10%; 
-    top:20%;
-    height:5%;
-    width:80%;
-    z-index:1;
-    background-color: none;
-    display: none;
-   
-}
-
-.divt9{
-    position:absolute; 
-    left:10%; 
-    top:20%;
-    height:5%;
-    width:80%;
-    z-index:1;
-    background-color: none;
-    display: none;
-   
-}
-
-.divt10{
-    position:absolute; 
-    left:10%; 
-    top:20%;
-    height:5%;
-    width:80%;
-    z-index:1;
-    background-color: none;
-    display: none;
-}
-
-.divt11{
-    position:absolute; 
-    left:10%; 
-    top:20%;
-    height:5%;
-    width:80%;
-    z-index:1;
-    background-color: none;
-    display: none;
-}
-
-.divt12{
-    position:absolute; 
-    left:10%; 
-    top:10%;
-    height:5%;
-    width:99%;
-    z-index:1;
-    background-color: none;
-   
-}
-
-.divt13{
-    position:absolute; 
-    left:10%; 
-    top:10%;
-    height:5%;
-    width:99%;
-    z-index:1;
-    background-color: none;
-   
-}
-
-.divt14{
-    position:absolute; 
-    left:10%; 
-    top:20%;
-    height:5%;
-    width:80%;
-    z-index:1;
-    background-color: blue;
-    display: none;
-    
-}
-
-.fundoinfo{
-    background-image: url("../images/green-polygon-wallpaper-1.jpg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.divaddcar{
+.div3{
     position: absolute;
-    left:5%; 
-    top:2%;
-    height:5%;
-    width:90%;
-    z-index:1;
-    background-color: none;
+    left:10%; 
+    top:40%;
+    width:80%;
+    z-index:2;
+    opacity: 1;
     display: none;
 }
 
-.divreserva{
+
+/* css tamicon pertence ao tamanho do icone de sucesso  */
+
+.tamicon{
+    font-size: 50px;
+    color:green;  
+}
+
+
+/* css div4 pertence a tela de mensagem de erro  */
+
+.div4{
     position: absolute;
-    left:5%; 
-    top:2%;
-    height:5%;
-    width:90%;
-    z-index:1;
-    background-color: none;
-    display: none;
-   
-}
-
-.divavaliar{
-    position: absolute;
-    left:5%; 
-    top:30%;
-    height:5%;
-    width:90%;
-    z-index:1;
-    background-color: none;
+    left:10%; 
+    top:40%;
+    width:80%;
+    z-index:2;
+    opacity: 1;
     display: none;
 }
 
+/* css tamicon pertence ao tamanho do icone de erro  */
+
+.tamicon2{
+    font-size: 50px;
+    color:red;
+}
+
+
+.drwr{
+    background-image: url("../images/space.png");
+    color: white;
+    height: 15%;
+}
+
+
+/* badge1 pertence ao tamanho do icone sobre o carrinho de compras e mensagens  */
+
+.badge1 {
+   position:relative;
+}
+
+.badge1:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-6px;
+   right:-6px;
+   font-size:.7em;
+   background:#D9D919;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+.badge1[data-badge='']::after {
+     content: none;
+}
 
