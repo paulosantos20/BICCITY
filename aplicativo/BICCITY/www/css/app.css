@@ -176,6 +176,8 @@ body {
 }
 
 
+/* carousel css pertence ao slideshow  */
+
 .carousel{
     background: #2f4357;
     margin-top: 0 px;
@@ -189,4 +191,23 @@ body {
 .bs-example{
 	margin: 0px;
 }
+
+/* divop e opc1 css pertence a div de opções da tela de usuario  */
+
+.divop{
+    width: 100%;
+    height: 50px;
+    background-color: none;
+    margin-top: 12%;
+}
+
+.opc1{
+    margin-left: 10px;
+    height: 50px;
+    float: left;
+    background-color: none;
+}
+
+
+
 
