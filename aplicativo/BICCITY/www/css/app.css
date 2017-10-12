@@ -208,6 +208,26 @@ body {
     background-color: none;
 }
 
+.divop2{
+    width: 90%;
+    background-color: black;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.opc2{
+    width: 30%;
+    height: 110px;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: left;
+    background-color: whitesmoke;
+}
+
+
+
+
+
 
 
 
