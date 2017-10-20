@@ -5,7 +5,7 @@ function initial() {
         
    
   
-            activate_page("#user");  
+            activate_page("#exibecine");  
                 
             return false;
               
