@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/11/2017, 19:13:29
+    Author     : Paulo
+*/
+
+.demo-layout-transparent {
+  background: url('../image/fundo.jpg') center / cover;
+ 
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  background-color: blue;
+  color: white;
+}
+
+.divindex{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-color:  transparent;
+}
+
+.demo-card-wide.mdl-card {
+  width: 30%;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: white;
+  height: 200px;
+ 
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: black;
+}
+
+.cinema{
+    background: url('../image/imagecinema.jpg') center / cover;
+}
+.farmacia{
+    background: url('../image/imagefarmacia.jpg') center / cover;
+}
+.hotel{
+    background: url('../image/imagehotel.jpg') center / cover;
+}
+.pizzaria{
+    background: url('../image/imagepizzaria.jpg') center / cover;
+}
+.restaurante{
+    background: url('../image/imagerestaurante.jpg') center / cover;
+}
+.supermercado{
+    background: url('../image/imagesupermercado.png') center / cover;
+}

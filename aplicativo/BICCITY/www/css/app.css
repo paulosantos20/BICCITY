@@ -302,18 +302,45 @@ body {
   color: #fff;
 }
 
+
 .demo-card-wide.mdl-card {
-  width: 100%;
+  width: 100%; 
+   
 }
 .demo-card-wide > .mdl-card__title {
-  color: black;
+  color: white;
   height: 176px;
- background-color: aqua;
+ background-color: skyblue;
+ background-image: url("http://3.bp.blogspot.com/-l270tQfhIPM/T-Q1y5ZP_jI/AAAAAAAAABY/xxTn_ewzyAg/s1600/empty_theater_shutterstock__120217144530.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 .demo-card-wide > .mdl-card__menu {
   color: black;
   
 }
+.demo-card-wide > .mdl-card__supporting-text{
+    background-color: white;
+    width: 100%;
+}
+
+.cine1{
+    width: auto;
+    background-color: beige;
+    float: none;
+    margin-top: 5%;
+}
+
+.cine2{
+    width: 30%;
+    background-color: white;
+    float: left;
+    
+}
+
+
+
 </style>
 
 
