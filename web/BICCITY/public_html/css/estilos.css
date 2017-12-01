@@ -27,6 +27,10 @@ and open the template in the editor.
     background-color:  transparent;
 }
 
+.margintext{
+    margin-left: 100px;
+}
+
 .demo-card-wide.mdl-card {
   width: 30%;
   float: left;
@@ -41,6 +45,20 @@ and open the template in the editor.
 
 .demo-card-wide > .mdl-card__menu {
   color: black;
+}
+
+.card{
+    width:40%;
+    margin-top: 5%;
+    margin-left:30%;
+}
+
+.taminput{
+    width:100%;
+}
+
+.posbutton{
+    margin-left: 60%;
 }
 
 .cinema{
@@ -60,4 +78,37 @@ and open the template in the editor.
 }
 .supermercado{
     background: url('../image/imagesupermercado.png') center / cover;
+}
+
+.division{
+    width:90%;
+    background-color:blue;
+}
+
+.card2{
+    float:left;
+    width:40%;
+    margin-top: 5%;
+    margin-left:10%;
+}
+
+.divprecos{
+    width:90%;
+    height:20px;
+    margin-left:10%;
+    margin-top:5%;
+}
+
+.postitle{
+    margin-top:20px;
+}
+
+.tamfonte{
+    font-size: 40px;
+}
+
+.cardpreco{
+    width:20%;
+    float:left;
+    margin-left:2%;
 }

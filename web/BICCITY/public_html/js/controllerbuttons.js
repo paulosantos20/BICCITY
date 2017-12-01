@@ -5,8 +5,26 @@
  */
 
 function chamapage1(){
+
+    location="cadastro.html";   
     
-    window.self.location.href="";    
 };
 
+function chamapage2(){
+
+    location="login.html";   
+    
+};
+
+function chamapage3(){
+
+    location="cadempresa.html";   
+    
+};
+
+function chamapage4(){
+
+    location="precos.html";   
+    
+};
 
