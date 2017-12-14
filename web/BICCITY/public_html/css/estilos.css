@@ -112,3 +112,7 @@ and open the template in the editor.
     float:left;
     margin-left:2%;
 }
+
+.fundo_plano_empresa{
+    background: url('../image/plano_empresa.jpg') center / cover;
+}
