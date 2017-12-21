@@ -114,5 +114,74 @@ and open the template in the editor.
 }
 
 .fundo_plano_empresa{
-    background: url('../image/plano_empresa.jpg') center / cover;
+    background:  url('../image/fundo_area_cliente.jpg') center / cover; 
+}
+
+.cortexto{
+    color:white;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+.divf{
+    width:100%;
+    background-color: white;
+    
+}
+
+.espaço1{margin-top:50px;}
+
+.espaço2{margin-top:100px;}
+
+.divf2{
+    width:100%;
+    background-color: grey;
+}
+
+.divdica1{
+    background-color: blue;
+    width:40%;
+    color:white;
+    margin-left:5%;
+    margin-top: 50px;
+}
+
+.teste{color:white;}
+
+.blue-box {
+    background-color: blue;
+height: 310px;
+margin-bottom: 30px;
+margin-top:45px;
+padding: 45px 55px;
+    padding-top: 45px;
+    padding-right: 55px;
+    padding-bottom: 45px;
+    padding-left: 55px;
+}
+
+.title {
+    font-size: 32px;
+    color: white;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.box{
+    display: flex;
+    margin-top:45px;
+    justify-content: space-around;
+    flex-direction: column;
+background-color: #f2ebe2;
+min-height: 310px;
+padding: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+margin-bottom: 30px;
 }

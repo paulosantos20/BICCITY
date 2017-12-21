@@ -18,7 +18,7 @@ function chamapage2(){
 
 function chamapage3(){
 
-    location="cadempresa.html";   
+    location="area_cliente.html";   
     
 };
 

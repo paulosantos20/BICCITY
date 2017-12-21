@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
- var latitude;
+var latitude;
 var longitude;
 var geocoder;
 var cidadeEndereco;
